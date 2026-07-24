@@ -1,1 +1,239 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d9" for="edge" attr.name="name" attr.type="string" />
+<key id="d8" for="edge" attr.name="capacity" attr.type="long" />
+<key id="d7" for="edge" attr.name="distance" attr.type="long" />
+<key id="d6" for="edge" attr.name="cost" attr.type="long" />
+<key id="d5" for="edge" attr.name="type" attr.type="string" />
+<key id="d4" for="node" attr.name="retailer_type" attr.type="string" />
+<key id="d3" for="node" attr.name="name" attr.type="string" />
+<key id="d2" for="node" attr.name="capacity" attr.type="long" />
+<key id="d1" for="node" attr.name="city" attr.type="string" />
+<key id="d0" for="node" attr.name="type" attr.type="string" />
+<graph edgedefault="directed"><node id="S1">
+  <data key="d0">supplier</data>
+  <data key="d1">Natal</data>
+  <data key="d2">2264</data>
+  <data key="d3">Supplier S1</data>
+</node>
+<node id="S2">
+  <data key="d0">supplier</data>
+  <data key="d1">Recife</data>
+  <data key="d2">3849</data>
+  <data key="d3">Supplier S2</data>
+</node>
+<node id="W1">
+  <data key="d0">warehouse</data>
+  <data key="d1">Caruaru</data>
+  <data key="d2">3145</data>
+  <data key="d3">Warehouse W1</data>
+</node>
+<node id="W2">
+  <data key="d0">warehouse</data>
+  <data key="d1">Joao Pessoa</data>
+  <data key="d2">6378</data>
+  <data key="d3">Warehouse W2</data>
+</node>
+<node id="R1">
+  <data key="d0">retailer</data>
+  <data key="d1">Joao Pessoa</data>
+  <data key="d4">market</data>
+  <data key="d3">Retailer R1</data>
+</node>
+<node id="R2">
+  <data key="d0">retailer</data>
+  <data key="d1">Natal</data>
+  <data key="d4">pharmacy</data>
+  <data key="d3">Retailer R2</data>
+</node>
+<node id="C2_S1">
+  <data key="d0">supplier</data>
+  <data key="d1">Maceio</data>
+  <data key="d2">4763</data>
+  <data key="d3">Supplier S1</data>
+</node>
+<node id="C2_W1">
+  <data key="d0">warehouse</data>
+  <data key="d1">Joao Pessoa</data>
+  <data key="d2">2410</data>
+  <data key="d3">Warehouse W1</data>
+</node>
+<node id="C2_W2">
+  <data key="d0">warehouse</data>
+  <data key="d1">Petrolina</data>
+  <data key="d2">5261</data>
+  <data key="d3">Warehouse W2</data>
+</node>
+<node id="C2_R1">
+  <data key="d0">retailer</data>
+  <data key="d1">Maceio</data>
+  <data key="d4">wholesale</data>
+  <data key="d3">Retailer R1</data>
+</node>
+<node id="C2_R2">
+  <data key="d0">retailer</data>
+  <data key="d1">Natal</data>
+  <data key="d4">convenience</data>
+  <data key="d3">Retailer R2</data>
+</node>
+<edge source="S1" target="W1" id="0">
+  <data key="d5">route</data>
+  <data key="d6">40</data>
+  <data key="d7">1175</data>
+  <data key="d8">2229</data>
+  <data key="d9">Route 1</data>
+</edge>
+<edge source="S1" target="W1" id="1">
+  <data key="d5">route</data>
+  <data key="d6">353</data>
+  <data key="d7">1142</data>
+  <data key="d8">333</data>
+  <data key="d9">Route 2</data>
+</edge>
+<edge source="S1" target="W1" id="2">
+  <data key="d5">route</data>
+  <data key="d6">459</data>
+  <data key="d7">423</data>
+  <data key="d8">156</data>
+  <data key="d9">Route 3</data>
+</edge>
+<edge source="S1" target="W2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">338</data>
+  <data key="d7">274</data>
+  <data key="d8">1306</data>
+  <data key="d9">Route 4</data>
+</edge>
+<edge source="S1" target="W2" id="1">
+  <data key="d5">route</data>
+  <data key="d6">379</data>
+  <data key="d7">478</data>
+  <data key="d8">1803</data>
+  <data key="d9">Route 5</data>
+</edge>
+<edge source="S2" target="W2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">279</data>
+  <data key="d7">195</data>
+  <data key="d8">2029</data>
+  <data key="d9">Route 6</data>
+</edge>
+<edge source="S2" target="W2" id="1">
+  <data key="d5">route</data>
+  <data key="d6">426</data>
+  <data key="d7">345</data>
+  <data key="d8">1785</data>
+  <data key="d9">Route 7</data>
+</edge>
+<edge source="S2" target="W2" id="2">
+  <data key="d5">route</data>
+  <data key="d6">233</data>
+  <data key="d7">704</data>
+  <data key="d8">2714</data>
+  <data key="d9">Route 8</data>
+</edge>
+<edge source="W1" target="R1" id="0">
+  <data key="d5">route</data>
+  <data key="d6">230</data>
+  <data key="d7">496</data>
+  <data key="d8">1232</data>
+  <data key="d9">Route 9</data>
+</edge>
+<edge source="W1" target="R2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">287</data>
+  <data key="d7">1094</data>
+  <data key="d8">2058</data>
+  <data key="d9">Route 10</data>
+</edge>
+<edge source="W1" target="R2" id="1">
+  <data key="d5">route</data>
+  <data key="d6">189</data>
+  <data key="d7">458</data>
+  <data key="d8">1547</data>
+  <data key="d9">Route 11</data>
+</edge>
+<edge source="W1" target="R2" id="2">
+  <data key="d5">route</data>
+  <data key="d6">402</data>
+  <data key="d7">1012</data>
+  <data key="d8">854</data>
+  <data key="d9">Route 12</data>
+</edge>
+<edge source="W2" target="R1" id="0">
+  <data key="d5">route</data>
+  <data key="d6">305</data>
+  <data key="d7">1120</data>
+  <data key="d8">2794</data>
+  <data key="d9">Route 13</data>
+</edge>
+<edge source="W2" target="R1" id="1">
+  <data key="d5">route</data>
+  <data key="d6">152</data>
+  <data key="d7">205</data>
+  <data key="d8">345</data>
+  <data key="d9">Route 14</data>
+</edge>
+<edge source="W2" target="R2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">360</data>
+  <data key="d7">437</data>
+  <data key="d8">1156</data>
+  <data key="d9">Route 15</data>
+</edge>
+<edge source="W2" target="R2" id="1">
+  <data key="d5">route</data>
+  <data key="d6">375</data>
+  <data key="d7">804</data>
+  <data key="d8">1915</data>
+  <data key="d9">Route 16</data>
+</edge>
+<edge source="C2_S1" target="C2_W2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">454</data>
+  <data key="d7">967</data>
+  <data key="d8">1729</data>
+  <data key="d9">Route 1</data>
+</edge>
+<edge source="C2_S1" target="C2_W2" id="1">
+  <data key="d5">route</data>
+  <data key="d6">460</data>
+  <data key="d7">1030</data>
+  <data key="d8">2277</data>
+  <data key="d9">Route 2</data>
+</edge>
+<edge source="C2_W1" target="C2_R1" id="0">
+  <data key="d5">route</data>
+  <data key="d6">294</data>
+  <data key="d7">387</data>
+  <data key="d8">898</data>
+  <data key="d9">Route 3</data>
+</edge>
+<edge source="C2_W1" target="C2_R2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">50</data>
+  <data key="d7">1187</data>
+  <data key="d8">518</data>
+  <data key="d9">Route 4</data>
+</edge>
+<edge source="C2_W2" target="C2_R1" id="0">
+  <data key="d5">route</data>
+  <data key="d6">169</data>
+  <data key="d7">1141</data>
+  <data key="d8">2801</data>
+  <data key="d9">Route 5</data>
+</edge>
+<edge source="C2_W2" target="C2_R1" id="1">
+  <data key="d5">route</data>
+  <data key="d6">485</data>
+  <data key="d7">1168</data>
+  <data key="d8">1297</data>
+  <data key="d9">Route 6</data>
+</edge>
+<edge source="C2_W2" target="C2_R2" id="0">
+  <data key="d5">route</data>
+  <data key="d6">93</data>
+  <data key="d7">485</data>
+  <data key="d8">1000</data>
+  <data key="d9">Route 7</data>
+</edge>
+</graph></graphml>
