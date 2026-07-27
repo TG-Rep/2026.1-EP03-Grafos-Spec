@@ -270,32 +270,40 @@ cypher/Q02.cypher
 #### (a) 
 Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
-> Resposta esperada:
+> Saída Esperada (24 records): 
 
 warehouse | score
 ----------| -------------
 "Warehouse N_W1" | 7.0
 "Warehouse N_W9" | 7.0
 "Warehouse NE_W3" | 6.0
+... | ...
 
 #### (b) 
 Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+
+> Saída Esperada (24 records):
 
 warehouse | score
 ----------| -------------
 "Warehouse N_W1" | 1252.5
 "Warehouse NE_W7" | 955.33
 "Warehouse N_W6" | 863.67
+... | ...
 
 #### (c) 
 Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
 Apresente os resultados em ordem decrescente.
+
+
+> Saída Esperada (24 records):
 
 warehouse | score
 ----------| -------------
 "Warehouse N_W1" | 0.49
 "Warehouse N_W6" | 0.48
 "Warehouse N_W4" | 0.47
+... | ...
 
 #### (d) 
 
