@@ -8,7 +8,7 @@ Diferentemente dos exercícios anteriores, neste EP as implementações não ser
 
 # Orientações Gerais
 
-* Utilize estritamente a estrutura disponibilizada no repositório. Não altere nomes de arquivos nem sua localização, pois isso poderá inviabilizar a execução automática dos testes durante o *push* do repositório;
+* Utilize estritamente a estrutura disponibilizada no repositório. Não altere nomes de arquivos nem sua localização, pois isso poderá inviabilizar a correção automática da atividade;
 
 * Todas as consultas devem ser escritas em **Cypher**, utilizando o banco de dados Neo4j disponibilizado para a disciplina;
 
@@ -27,8 +27,6 @@ Diferentemente dos exercícios anteriores, neste EP as implementações não ser
 # Entrega
 
 * Realize *push* da versão final do repositório até o prazo definido no Google Classroom;
-
-* Durante a correção será considerada a execução mais recente dos *workflows* do GitHub Actions. A equipe poderá reexecutar os *workflows*, caso necessário;
 
 * Caso o projeto contenha erros que impeçam sua execução ou a execução dos testes automáticos, estes não poderão ser corrigidos após o prazo;
 
