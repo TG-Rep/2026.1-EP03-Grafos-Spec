@@ -231,20 +231,97 @@ Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) con
 
 (a) Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
+
+```cypher
+MATCH (s:Supplier)
+RETURN count(s) AS suppliers;
+```
+
+```cypher
+MATCH (w:Warehouse)
+RETURN count(w) AS warehouses;
+```
+
+```cypher
+MATCH (r:Retailer)
+RETURN count(r) AS retailers;
+```
+
+OU
+
+```cypher
+MATCH (n:Supplier)
+RETURN 'Supplier' AS type, count(n) AS quantity
+UNION
+MATCH (n:Warehouse)
+RETURN 'Warehouse', count(n)
+UNION
+MATCH (n:Retailer)
+RETURN 'Retailer', count(n);
+```
+
 SAÍDA ESPERADA:
+
+CRITÉRIOS DE CORREÇÃO:
+
+* consulta em CYPHER que identifica corretamente cada label, utiliza count e retorna uma contagem para cada tipo de entidade.
+
 
 
 (b) Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
+```cypher
+MATCH (w:Warehouse)-[:ROUTE]->(r:Retailer)
+RETURN
+    w.name AS warehouse,
+    count(r) AS retailers
+ORDER BY retailers DESC;
+```
+
 SAÍDA ESPERADA:
+
+CRITÉRIOS DE CORREÇÃO:
+
+considera apenas relacionamentos ROUTE;
+conta apenas vértices Retailer;
+ordena em ordem decrescente.
 
 (c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
+```cypher
+MATCH (s:Supplier)-[:ROUTE]->(w:Warehouse)
+RETURN
+    s.name AS supplier,
+    count(w) AS warehouses
+ORDER BY warehouses DESC;
+```
+
 SAÍDA ESPERADA:
+
+CRITÉRIOS DE CORREÇÃO:
+
+considera apenas fornecedores;
+contabiliza apenas warehouses;
+apresenta o resultado ordenado.
 
 (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
 
+```cypher
+MATCH (w:Warehouse)
+RETURN
+    w.city AS city,
+    count(w) AS warehouses
+ORDER BY warehouses DESC;
+```
+
 SAÍDA ESPERADA:
+
+CRITÉRIOS DE CORREÇÃO:
+
+agrupa pela propriedade city;
+utiliza count;
+ordena os resultados.
+
 
 ## Questão 02 — Identificação de Hubs Logísticos
 
@@ -269,25 +346,202 @@ cypher/Q02.cypher
 
 (a) Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
+```cypher
+CALL gds.degree.stream('logistics')
+YIELD nodeId, score
+WITH gds.util.asNode(nodeId) AS node, score
+WHERE node:Warehouse
+RETURN
+    node.name AS warehouse,
+    score
+ORDER BY score DESC;
+```
+
 (b) Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+
+```cypher
+CALL gds.betweenness.stream('logistics')
+YIELD nodeId, score
+WITH gds.util.asNode(nodeId) AS node, score
+WHERE node:Warehouse
+RETURN
+    node.name AS warehouse,
+    score
+ORDER BY score DESC;
+```
 
 (c) Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
 Apresente os resultados em ordem decrescente.
+
+```cypher
+CALL gds.pageRank.stream('logistics')
+YIELD nodeId, score
+WITH gds.util.asNode(nodeId) AS node, score
+WHERE node:Warehouse
+RETURN
+    node.name AS warehouse,
+    score
+ORDER BY score DESC;
+```
 
 (d) Interpretação dos Resultados
 
 Elabore um breve relatório (`docs/Q02.md`) respondendo às seguintes questões.
 
-1. Qual warehouse apresentou maior importância segundo cada uma das três medidas?
+1. Qual(is) warehouse(s) apresentou(aram) maior importância segundo cada uma das três medidas?
 
-2. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
+Resposta esperada:
 
-3. Explique, em suas próprias palavras, a diferença entre:
+identificar corretamente o warehouse com maior score em cada algoritmo.
+
+3. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
+
+Resposta esperada:
+
+Pode ocorrer:
+
+sim;
+parcialmente;
+não.
+
+A justificativa é mais importante do que a resposta.
+
+Espera-se que o aluno explique que cada algoritmo mede uma característica diferente da rede.
+
+5. Explique, em suas próprias palavras, a diferença entre:
 
    - Degree Centrality;
    - Betweenness Centrality;
    - PageRank.
+  
+Resposta esperada
 
-4. Considerando o domínio de logística, qual dessas medidas você considera mais adequada para identificar **hubs logísticos**? Justifique.
+Degree Centrality
 
+Mede o número de conexões diretas do warehouse.
+
+Um warehouse com alto grau atende muitos vizinhos imediatamente.
+
+Betweenness Centrality
+
+Mede quantos caminhos mínimos passam pelo warehouse.
+
+Valores elevados indicam gargalos logísticos ou pontos críticos da distribuição.
+
+PageRank
+
+Considera não apenas a quantidade de conexões, mas também a importância dos vértices vizinhos.
+
+Um warehouse conectado a outros hubs importantes tende a receber PageRank elevado.
+
+6. Considerando o domínio de logística, qual dessas medidas você considera mais adequada para identificar **hubs logísticos**? Justifique.
+
+   Resposta esperada
+
+A resposta esperada é Betweenness Centrality.
+
+Justificativa:
+
+identifica vértices que concentram caminhos;
+sua remoção tende a afetar grande parte da distribuição.
+
+Outras respostas podem ser aceitas desde que tecnicamente justificadas.
+
+## Questão 03 — Descoberta de Comunidades
+
+Uma empresa deseja compreender como sua rede logística está naturalmente organizada, identificando grupos de entidades mais fortemente conectadas entre si. Esses grupos podem representar regiões logísticas, áreas de atuação ou comunidades operacionais. Utilizando a biblioteca **Neo4j Graph Data Science (GDS)**, aplique um algoritmo de detecção de comunidades sobre o grafo `logistics`.
+
+As consultas deverão ser implementadas no arquivo:
+
+```
+cypher/Q03.cypher
+```
+
+(a) Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
+
+```cypher
+CALL gds.louvain.stream('logistics')
+YIELD nodeId, communityId
+RETURN
+    gds.util.asNode(nodeId).name AS node,
+    labels(gds.util.asNode(nodeId)) AS labels,
+    communityId
+ORDER BY communityId, node;
+```
+
+(b) Escreva uma consulta para determinar quantas comunidades foram identificadas pelo algoritmo.
+
+```cypher
+CALL gds.louvain.stream('logistics')
+YIELD communityId
+RETURN count(DISTINCT communityId) AS communities;
+```
+
+ (c) Para cada comunidade encontrada, apresente seus membros. A consulta deve retornar: identificador da comunidade, lista de vértices pertencentes à comunidade.
+
+ ```cypher
+CALL gds.louvain.stream('logistics')
+YIELD nodeId, communityId
+WITH communityId,
+     gds.util.asNode(nodeId) AS node
+RETURN
+    communityId,
+    collect(node.name) AS members
+ORDER BY communityId;
+```
+
+(d) Interpretação
+
+Elabore um breve relatório (`docs/Q03.md`) respondendo às seguintes questões.
+
+1. As comunidades encontradas representam regiões logísticas distintas? Justifique.
+
+   Resposta esperada
+
+O aluno deve analisar os resultados.
+
+Uma boa resposta pode observar, por exemplo, que:
+
+warehouses de uma mesma cidade tendem a ficar na mesma comunidade;
+fornecedores normalmente pertencem à comunidade que abastecem;
+retailers aparecem agrupados ao warehouse responsável.
+
+Não é necessário que isso ocorra exatamente dessa forma; a justificativa deve ser baseada no resultado obtido.
+
+2. Existem warehouses que atuam como ligação entre comunidades diferentes? Caso positivo, identifique alguns exemplos.
+
+Resposta esperada
+
+O aluno deve identificar warehouses que possuem relacionamentos com vértices pertencentes a comunidades distintas.
+
+Esses vértices podem representar:
+
+centros de redistribuição;
+hubs regionais;
+pontos de integração da rede.
+
+3. O resultado obtido faz sentido do ponto de vista da operação logística? Explique.
+
+   Espera-se que o aluno discuta aspectos como:
+
+proximidade geográfica;
+divisão natural da operação;
+independência entre regiões;
+concentração de clientes.
+
+A justificativa é mais importante do que a resposta.
+
+4. Como a empresa poderia utilizar essas comunidades para apoiar decisões estratégicas?
+
+Resposta esperada
+
+Exemplos:
+
+dividir a operação em regiões;
+atribuir equipes diferentes;
+planejar manutenção por comunidade;
+distribuir estoques regionalmente;
+identificar oportunidades de expansão.
+
+Outras respostas coerentes devem ser aceitas.
 
