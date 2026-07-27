@@ -36,11 +36,16 @@ Diferentemente dos exercícios anteriores, neste EP os algoritmos clássicos nã
 
 * Alterações realizadas após o prazo serão tratadas conforme as regras da disciplina para atividades de reposição.
 
+---
+
 # Domínio do Problema
 
 Neste exercício continuaremos utilizando o mesmo domínio dos EP01 e EP02.
 
 Uma **cadeia de suprimento** é composta por fornecedores, centros de distribuição e clientes, conectados por rotas de transporte que representam o fluxo de mercadorias. O objetivo da empresa é compreender melhor sua rede logística, respondendo perguntas estratégicas por meio de consultas ao banco de dados e algoritmos de análise de grafos.
+
+
+---
 
 # Modelo de Dados no Neo4j
 
@@ -95,7 +100,9 @@ WAREHOUSE ──ROUTE──► RETAILER
 Não existem relacionamentos diretos:
 
 * Supplier → Retailer
-* Retailer → qualquer outro vértice=
+* Retailer → qualquer outro vértice
+
+---
 
 # Importação do Grafo
 
@@ -103,7 +110,7 @@ Após criar um sandbox Neo4j vazio, importe o grafo utilizando o procedimento AP
 
 ```cypher
 CALL apoc.import.graphml(
-  "https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/lognet.graphml",
+  "[https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/lognet.graphml](https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/norte_nordeste_bidirecional_realista.graphml)",
   {readLabels: true}
 );
 ```
@@ -182,6 +189,8 @@ RETURN
 
 INCLUIR IMAGEM AQUI
 
+---
+
 # Objetivos do EP03
 
 Ao final desta atividade, espera-se que o aluno seja capaz de:
@@ -194,6 +203,8 @@ Ao final desta atividade, espera-se que o aluno seja capaz de:
 * modelar problemas clássicos de Teoria dos Grafos em Neo4j;
 * interpretar resultados obtidos por algoritmos de análise de grafos no contexto de cadeias de suprimento.
 
+---
+
 # Questões
 
 ## Questão 01 — Dashboard Estrutural
@@ -203,96 +214,33 @@ Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) con
 
 (a) Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
-
-```cypher
-MATCH (s:Supplier)
-RETURN count(s) AS suppliers;
-```
-
-```cypher
-MATCH (w:Warehouse)
-RETURN count(w) AS warehouses;
-```
-
-```cypher
-MATCH (r:Retailer)
-RETURN count(r) AS retailers;
-```
-
-OU
-
-```cypher
-MATCH (n:Supplier)
-RETURN 'Supplier' AS type, count(n) AS quantity
-UNION
-MATCH (n:Warehouse)
-RETURN 'Warehouse', count(n)
-UNION
-MATCH (n:Retailer)
-RETURN 'Retailer', count(n);
-```
-
-SAÍDA ESPERADA:
-
-CRITÉRIOS DE CORREÇÃO:
-
-* consulta em CYPHER que identifica corretamente cada label, utiliza count e retorna uma contagem para cada tipo de entidade.
-
-
+SAÍDA ESPERADA para `lognet.graphml`:
 
 (b) Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
-```cypher
-MATCH (w:Warehouse)-[:ROUTE]->(r:Retailer)
-RETURN
-    w.name AS warehouse,
-    count(r) AS retailers
-ORDER BY retailers DESC;
-```
 
 SAÍDA ESPERADA:
+type | quantity
+---|------
+SUPPLIER | 3
+WAREHOUSE |4
+RETAILER | 4
 
-CRITÉRIOS DE CORREÇÃO:
-
-considera apenas relacionamentos ROUTE;
-conta apenas vértices Retailer;
-ordena em ordem decrescente.
 
 (c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
-```cypher
-MATCH (s:Supplier)-[:ROUTE]->(w:Warehouse)
-RETURN
-    s.name AS supplier,
-    count(w) AS warehouses
-ORDER BY warehouses DESC;
-```
 
 SAÍDA ESPERADA:
 
-CRITÉRIOS DE CORREÇÃO:
 
-considera apenas fornecedores;
-contabiliza apenas warehouses;
-apresenta o resultado ordenado.
 
 (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
 
-```cypher
-MATCH (w:Warehouse)
-RETURN
-    w.city AS city,
-    count(w) AS warehouses
-ORDER BY warehouses DESC;
-```
+
 
 SAÍDA ESPERADA:
 
-CRITÉRIOS DE CORREÇÃO:
 
-agrupa pela propriedade city;
-utiliza count;
-ordena os resultados.
 
 
 ## Questão 02 — Identificação de Hubs Logísticos
