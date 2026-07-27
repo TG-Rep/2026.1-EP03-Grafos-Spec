@@ -218,7 +218,8 @@ warehouse | retailers
 ... | ...
 
 
-(c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
+#### (c) 
+Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (16 records):
 
@@ -231,7 +232,8 @@ supplier | warehouses
 
 
 
-(d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
+#### (d) 
+Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (24 records):
 
@@ -265,108 +267,50 @@ Implemente as consultas solicitadas no arquivo:
 cypher/Q02.cypher
 ```
 
-(a) Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+#### (a) 
+Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
-```cypher
-CALL gds.degree.stream('logistics')
-YIELD nodeId, score
-WITH gds.util.asNode(nodeId) AS node, score
-WHERE node:Warehouse
-RETURN
-    node.name AS warehouse,
-    score
-ORDER BY score DESC;
-```
+> Resposta esperada:
 
-(b) Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+warehouse | score
+----------| -------------
+"Warehouse N_W1" | 7.0
+"Warehouse N_W9" | 7.0
+"Warehouse NE_W3" | 6.0
 
-```cypher
-CALL gds.betweenness.stream('logistics')
-YIELD nodeId, score
-WITH gds.util.asNode(nodeId) AS node, score
-WHERE node:Warehouse
-RETURN
-    node.name AS warehouse,
-    score
-ORDER BY score DESC;
-```
+#### (b) 
+Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
-(c) Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
+warehouse | score
+----------| -------------
+"Warehouse N_W1" | 1252.5
+"Warehouse NE_W7" | 955.33
+"Warehouse N_W6" | 863.67
+
+#### (c) 
+Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
 Apresente os resultados em ordem decrescente.
 
-```cypher
-CALL gds.pageRank.stream('logistics')
-YIELD nodeId, score
-WITH gds.util.asNode(nodeId) AS node, score
-WHERE node:Warehouse
-RETURN
-    node.name AS warehouse,
-    score
-ORDER BY score DESC;
-```
+warehouse | score
+----------| -------------
+"Warehouse N_W1" | 0.49
+"Warehouse N_W6" | 0.48
+"Warehouse N_W4" | 0.47
 
-(d) Interpretação dos Resultados
+#### (d) 
 
-Elabore um breve relatório (`docs/Q02.md`) respondendo às seguintes questões.
+Responda às seguintes questões em `docs/Q02.md`.
 
 1. Qual(is) warehouse(s) apresentou(aram) maior importância segundo cada uma das três medidas?
 
-Resposta esperada:
+2. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
 
-identificar corretamente o warehouse com maior score em cada algoritmo.
-
-3. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
-
-Resposta esperada:
-
-Pode ocorrer:
-
-sim;
-parcialmente;
-não.
-
-A justificativa é mais importante do que a resposta.
-
-Espera-se que o aluno explique que cada algoritmo mede uma característica diferente da rede.
-
-5. Explique, em suas próprias palavras, a diferença entre:
-
+3. Explique, em suas próprias palavras, no contexto deste exercício, a diferença entre:
    - Degree Centrality;
    - Betweenness Centrality;
    - PageRank.
-  
-Resposta esperada
 
-Degree Centrality
-
-Mede o número de conexões diretas do warehouse.
-
-Um warehouse com alto grau atende muitos vizinhos imediatamente.
-
-Betweenness Centrality
-
-Mede quantos caminhos mínimos passam pelo warehouse.
-
-Valores elevados indicam gargalos logísticos ou pontos críticos da distribuição.
-
-PageRank
-
-Considera não apenas a quantidade de conexões, mas também a importância dos vértices vizinhos.
-
-Um warehouse conectado a outros hubs importantes tende a receber PageRank elevado.
-
-6. Considerando o domínio de logística, qual dessas medidas você considera mais adequada para identificar **hubs logísticos**? Justifique.
-
-   Resposta esperada
-
-A resposta esperada é Betweenness Centrality.
-
-Justificativa:
-
-identifica vértices que concentram caminhos;
-sua remoção tende a afetar grande parte da distribuição.
-
-Outras respostas podem ser aceitas desde que tecnicamente justificadas.
+4. Considerando o domínio de logística, qual dessas medidas você considera mais adequada para identificar **hubs logísticos**? Justifique.
 
 ## Questão 03 — Descoberta de Comunidades
 
