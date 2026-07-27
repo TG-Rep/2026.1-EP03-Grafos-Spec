@@ -173,10 +173,13 @@ nodes | relationships
 
 # Questões
 
-## Questão 01 — Dashboard Estrutural
+## Questão 01 — Dashboard 
 
-Uma empresa deseja obter uma visão geral da estrutura de sua rede logística antes de realizar análises mais avançadas.
-Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) contendo informações estruturais sobre a rede. As consultas deverão ser implementadas no arquivo: `cypher/Q01.cypher`
+**Objetivo**: Obter uma visão geral da estrutura de sua rede logística antes de realizar análises mais avançadas.
+
+As consultas deverão ser implementadas no arquivo: 
+
+`cypher/Q01.cypher`
 
 #### (a)  Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
@@ -228,7 +231,7 @@ city | warehouses
 
 ## Questão 02 — Identificação de Hubs Logísticos
 
-Uma empresa deseja identificar quais centros de distribuição exercem maior influência sobre sua rede logística.
+**Objetivo**: identificar quais centros de distribuição exercem maior influência sobre sua rede logística.
 Para isso, serão utilizadas medidas clássicas de **centralidade** disponíveis na biblioteca **Neo4j Graph Data Science (GDS)**.
 
 Nesta questão, considere o grafo projetado denominado `logistics`. Caso ele ainda não exista, crie-o utilizando:
@@ -297,7 +300,7 @@ warehouse | score
 
 ## Questão 03 — Descoberta de Comunidades
 
-Uma empresa deseja compreender como sua rede logística está naturalmente organizada, identificando grupos de entidades mais fortemente conectadas entre si. Esses grupos podem representar regiões logísticas, áreas de atuação ou comunidades operacionais. Utilizando a biblioteca **Neo4j Graph Data Science (GDS)**, aplique um algoritmo de detecção de comunidades sobre o grafo `logistics`.
+**Objetivo**: compreender como uma rede logística está naturalmente organizada, identificando grupos de entidades mais fortemente conectadas entre si. Esses grupos podem representar regiões logísticas, áreas de atuação ou comunidades operacionais. Utilizando a biblioteca **Neo4j Graph Data Science (GDS)**, aplique um algoritmo de detecção de comunidades sobre o grafo `logistics`.
 
 As consultas deverão ser implementadas no arquivo:
 
