@@ -51,41 +51,12 @@ Uma **cadeia de suprimento** é composta por fornecedores, centros de distribui�
 
 A rede logística é representada por um grafo direcionado contendo três tipos de vértices.
 
-## Supplier
-
-Representa um fornecedor de produtos. Principais propriedades: 
-
-* `name`
-* `city`
-* `capacity`
-
-## Warehouse
-
-Representa um centro de distribuição. Principais propriedades:
-
-* `name`
-* `city`
-* `capacity`
-
-## Retailer
-
-Representa o cliente final. Principais propriedades:
-
-* `name`
-* `city`
-* `retailer_type`
-
-## Relacionamentos
+* `SUPPLIER` - Representa um fornecedor de produtos. Principais propriedades:  `name`, `city`,  `capacity`
+* `WAREHOUSE` - Representa um centro de distribuição. Principais propriedades: `name`, `city`, `capacity`
+* `RETAILER` - Representa o cliente final. Principais propriedades: `name`, `city`, `retailer_type`
 
 Todos os relacionamentos possuem tipo `:ROUTE` e representam rotas de transporte entre entidades da cadeia logística.
-Cada relacionamento possui, entre outras, as propriedades:
-
-* `capacity`
-* `distance`
-* `cost`
-* `name`
-
-## Estrutura da Rede
+Cada relacionamento possui, entre outras, as propriedades: `capacity`,  `distance`, `cost`, `name`
 
 O modelo admite apenas as seguintes conexões:
 
@@ -155,28 +126,31 @@ CALL db.schema.visualization();
 ```
 
 Saída esperada:
+
 ![](images/schema.png)
 
 Liste as labels existentes:
 
 ```cypher
-SHOW LABELS;
+CALL db.labels();
+```
+
+Saída Esperada: 
+```
+"SUPPLIER"
+"WAREHOUSE"
+"RETAILER"
 ```
 
 Liste os tipos de relacionamento:
 
 ```cypher
-SHOW RELATIONSHIP TYPES;
+CALL db.relationshipTypes();
 ```
 
-O esquema esperado é equivalente ao seguinte:
-
+Saída Esperada: 
 ```
-(:Supplier)-[:ROUTE]->(:Warehouse)
-
-(:Warehouse)-[:ROUTE]->(:Warehouse)
-
-(:Warehouse)-[:ROUTE]->(:Retailer)
+ROUTE
 ```
 
 Verifique quantos nós e relacionamentos contém:
@@ -190,7 +164,11 @@ RETURN
     count(r) AS relationships;
 ```
 
-INCLUIR IMAGEM AQUI
+Saída esperada:
+
+nodes | relationships
+------| -------------
+88    |  165
 
 ---
 
@@ -217,7 +195,13 @@ Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) con
 
 (a) Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
-SAÍDA ESPERADA para `lognet.graphml`:
+SAÍDA ESPERADA:
+
+type | quantity
+-----------------
+"SUPPLIER" | 16
+"WAREHOUSE" | 24
+"RETAILER" | 48
 
 (b) Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
