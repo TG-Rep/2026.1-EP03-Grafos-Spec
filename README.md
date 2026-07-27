@@ -44,10 +44,6 @@ O repositório possui a seguinte organização.
 
 ```
 .
-├── graphs/
-│   ├── logistics.graphml
-│   └── ...
-│
 ├── cypher/
 │   ├── Q01.cypher
 │   ├── Q02.cypher
@@ -57,8 +53,6 @@ O repositório possui a seguinte organização.
 │
 └── README.md
 ```
-
-* **graphs** -  Contém os grafos logísticos utilizados durante a atividade.
 
 * **cypher** - Contém as consultas Cypher que deverão ser desenvolvidas para cada questão.
 
