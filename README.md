@@ -330,22 +330,37 @@ As consultas deverão ser implementadas no arquivo:
 cypher/Q03.cypher
 ```
 
-#### (a)
-Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
+#### (a) Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
 
-> Saída Esperada
+> Saída Esperada (88 records):
 
-#### (b) 
-Escreva uma consulta para determinar quantas comunidades foram identificadas pelo algoritmo.
+name | labels | community_id
+-----|------|---------------
+"Retailer NE_R1" | ["RETAILER"] | 41
+"Retailer NE_R2" | ["RETAILER"] | 41
+"Retailer NE_R3" | ["RETAILER"] | 41
+... | ... | ...
 
-> Saída Esperada
+#### (b)  Escreva uma consulta para determinar quantas comunidades foram identificadas pelo algoritmo.
 
-#### (c) 
-Para cada comunidade encontrada, apresente seus membros. A consulta deve retornar: identificador da comunidade, lista de vértices pertencentes à comunidade.
+> Saída Esperada:
 
-> Saída Esperada
+```
+communities
+10
+```
 
-(d) Interpretação
+#### (c)  Para cada comunidade encontrada, apresente seus membros. A consulta deve retornar: identificador da comunidade, lista de vértices pertencentes à comunidade.
+
+> Saída Esperada (10 records):
+
+communityId | members
+------------|--------
+41  | ["Supplier NE_S1", "Warehouse NE_W1", "Warehouse NE_W2", "Retailer NE_R1", "Retailer NE_R2", "Retailer NE_R3"]
+43  | ["Retailer NE_R4"]
+... | ...
+
+#### (d) Interpretação
 
 Responda às seguintes questões em `docs/Q03.md`:
 
