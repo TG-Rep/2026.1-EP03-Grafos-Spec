@@ -193,31 +193,41 @@ Ao final desta atividade, espera-se que o aluno seja capaz de:
 Uma empresa deseja obter uma visão geral da estrutura de sua rede logística antes de realizar análises mais avançadas.
 Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) contendo informações estruturais sobre a rede. As consultas deverão ser implementadas no arquivo: `cypher/Q01.cypher`
 
-(a) Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
+#### (a) 
+Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
-SAÍDA ESPERADA:
+> Saída Esperada:
 
 type | quantity
------------------
+------|-----------
 "SUPPLIER" | 16
 "WAREHOUSE" | 24
 "RETAILER" | 48
 
-(b) Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
+#### (b) 
+Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
 
-SAÍDA ESPERADA:
-type | quantity
----|------
-SUPPLIER | 3
-WAREHOUSE |4
-RETAILER | 4
+> Saída Esperada  (24 records):
+
+warehouse | retailers
+----------| ------------
+"Warehouse NE_W3" | 4
+"Warehouse NE_W5" | 4
+"Warehouse NE_W12" | 4
+... | ...
 
 
 (c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
+> Saída Esperada (16 records):
 
-SAÍDA ESPERADA:
+supplier | warehouses
+---------|------------
+"Supplier NE_S1" | 3
+"Supplier NE_S2" | 3
+"Supplier NE_S3" | 3
+... | ...
 
 
 
