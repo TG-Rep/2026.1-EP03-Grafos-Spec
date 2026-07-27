@@ -49,12 +49,18 @@ O repositório possui a seguinte organização.
 │   ├── Q02.cypher
 │   ├── Q03.cypher
 │   └── Q04.cypher
-├── images/
 │
+├── docs/
+│   ├── Q02.md
+|
+├── images/
+|
 └── README.md
 ```
 
 * **cypher** - Contém as consultas Cypher que deverão ser desenvolvidas para cada questão.
+
+* **docs** - Contém documentação eventualmente solicitada durante a atividade.
 
 * **images** - Contém figuras utilizadas neste documento.
 
@@ -107,11 +113,11 @@ Cada relacionamento possui, entre outras, as propriedades:
 O modelo admite apenas as seguintes conexões:
 
 ```
-Supplier  ──ROUTE──► Warehouse
+SUPPLIER  ──ROUTE──► WAREHOUSE
 
-Warehouse ──ROUTE──► Warehouse
+WAREHOUSE ──ROUTE──► WAREHOUSE
 
-Warehouse ──ROUTE──► Retailer
+WAREHOUSE ──ROUTE──► RETAILER
 ```
 
 Não existem relacionamentos diretos:
@@ -215,3 +221,73 @@ Ao final desta atividade, espera-se que o aluno seja capaz de:
 * identificar comunidades em redes logísticas;
 * modelar problemas clássicos de Teoria dos Grafos em Neo4j;
 * interpretar resultados obtidos por algoritmos de análise de grafos no contexto de cadeias de suprimento.
+
+# Questões
+
+## Questão 01 — Dashboard Estrutural
+
+Uma empresa deseja obter uma visão geral da estrutura de sua rede logística antes de realizar análises mais avançadas.
+Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) contendo informações estruturais sobre a rede. As consultas deverão ser implementadas no arquivo: `cypher/Q01.cypher`
+
+(a) Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
+
+SAÍDA ESPERADA:
+
+
+(b) Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
+
+SAÍDA ESPERADA:
+
+(c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
+
+SAÍDA ESPERADA:
+
+(d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
+
+SAÍDA ESPERADA:
+
+## Questão 02 — Identificação de Hubs Logísticos
+
+Uma empresa deseja identificar quais centros de distribuição exercem maior influência sobre sua rede logística.
+Para isso, serão utilizadas medidas clássicas de **centralidade** disponíveis na biblioteca **Neo4j Graph Data Science (GDS)**.
+
+Nesta questão, considere o grafo projetado denominado `logistics`. Caso ele ainda não exista, crie-o utilizando:
+
+```cypher
+CALL gds.graph.project(
+    'logistics',
+    ['SUPPLIER','WAREHOUSE','RETAILER'],
+    'ROUTE'
+);
+```
+
+Implemente as consultas solicitadas no arquivo:
+
+```
+cypher/Q02.cypher
+```
+
+(a) Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+
+(b) Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+
+(c) Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
+Apresente os resultados em ordem decrescente.
+
+(d) Interpretação dos Resultados
+
+Elabore um breve relatório (`docs/Q02.md`) respondendo às seguintes questões.
+
+1. Qual warehouse apresentou maior importância segundo cada uma das três medidas?
+
+2. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
+
+3. Explique, em suas próprias palavras, a diferença entre:
+
+   - Degree Centrality;
+   - Betweenness Centrality;
+   - PageRank.
+
+4. Considerando o domínio de logística, qual dessas medidas você considera mais adequada para identificar **hubs logísticos**? Justifique.
+
+
