@@ -191,7 +191,18 @@ O esquema esperado é equivalente ao seguinte:
 (:Warehouse)-[:ROUTE]->(:Retailer)
 ```
 
----
+Verifique quantos nós e relacionamentos contém:
+
+```cypher
+MATCH (n)
+WITH count(n) AS nodes
+MATCH ()-[r]->()
+RETURN
+    nodes,
+    count(r) AS relationships;
+```
+
+INCLUIR IMAGEM AQUI
 
 # Objetivos do EP03
 
