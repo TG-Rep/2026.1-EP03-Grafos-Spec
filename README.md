@@ -20,7 +20,7 @@ Diferentemente dos exercícios anteriores, neste EP as implementações não ser
 
 * É responsabilidade do grupo manter sua solução privada durante todo o período da atividade;
 
-* O trabalho deve ser realizado em grupo. Casos excepcionais deverão ser comunicados previamente à equipe docente.
+* O trabalho deve ser realizado em grupo. Casos excepcionais deverão ser comunicados previamente à equipe de ensino.
 
 ---
 
