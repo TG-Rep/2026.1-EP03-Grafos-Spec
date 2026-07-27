@@ -151,7 +151,7 @@ CALL db.relationshipTypes();
 ROUTE
 ```
 
-#### Verifique quantos nós e relacionamentos contém:
+#### Verifique quantos nós e relacionamentos o grafo contém:
 
 ```cypher
 MATCH (n)
