@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graphml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd" xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="d9" for="edge" attr.name="name" attr.type="string" />
+  <key id="d8" for="edge" attr.name="capacity" attr.type="long" />
+  <key id="d7" for="edge" attr.name="distance" attr.type="long" />
+  <key id="d6" for="edge" attr.name="cost" attr.type="long" />
+  <key id="d5" for="edge" attr.name="type" attr.type="string" />
+  <key id="d4" for="node" attr.name="retailer_type" attr.type="string" />
+  <key id="d3" for="node" attr.name="name" attr.type="string" />
+  <key id="d2" for="node" attr.name="capacity" attr.type="long" />
+  <key id="d1" for="node" attr.name="city" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="C1_S1">
+      <data key="d0">supplier</data>
+      <data key="d1">Salvador</data>
+      <data key="d2">5600</data>
+      <data key="d3">Supplier C1_S1</data>
+    </node>
+    <node id="C1_S2">
+      <data key="d0">supplier</data>
+      <data key="d1">Feira de Santana</data>
+      <data key="d2">4900</data>
+      <data key="d3">Supplier C1_S2</data>
+    </node>
+    <node id="C1_S3">
+      <data key="d0">supplier</data>
+      <data key="d1">Aracaju</data>
+      <data key="d2">4700</data>
+      <data key="d3">Supplier C1_S3</data>
+    </node>
+    <node id="C2_S1">
+      <data key="d0">supplier</data>
+      <data key="d1">Recife</data>
+      <data key="d2">6400</data>
+      <data key="d3">Supplier C2_S1</data>
+    </node>
+    <node id="C2_S2">
+      <data key="d0">supplier</data>
+      <data key="d1">Caruaru</data>
+      <data key="d2">4500</data>
+      <data key="d3">Supplier C2_S2</data>
+    </node>
+    <node id="C2_S3">
+      <data key="d0">supplier</data>
+      <data key="d1">Natal</data>
+      <data key="d2">5500</data>
+      <data key="d3">Supplier C2_S3</data>
+    </node>
+    <node id="C2_S4">
+      <data key="d0">supplier</data>
+      <data key="d1">Joao Pessoa</data>
+      <data key="d2">4600</data>
+      <data key="d3">Supplier C2_S4</data>
+    </node>
+    <node id="C3_S1">
+      <data key="d0">supplier</data>
+      <data key="d1">Fortaleza</data>
+      <data key="d2">7200</data>
+      <data key="d3">Supplier C3_S1</data>
+    </node>
+    <node id="C3_S2">
+      <data key="d0">supplier</data>
+      <data key="d1">Sobral</data>
+      <data key="d2">4300</data>
+      <data key="d3">Supplier C3_S2</data>
+    </node>
+    <node id="C3_S3">
+      <data key="d0">supplier</data>
+      <data key="d1">Teresina</data>
+      <data key="d2">6200</data>
+      <data key="d3">Supplier C3_S3</data>
+    </node>
+    <node id="C4_S1">
+      <data key="d0">supplier</data>
+      <data key="d1">Sao Luis</data>
+      <data key="d2">6900</data>
+      <data key="d3">Supplier C4_S1</data>
+    </node>
+    <node id="C4_S2">
+      <data key="d0">supplier</data>
+      <data key="d1">Imperatriz</data>
+      <data key="d2">4200</data>
+      <data key="d3">Supplier C4_S2</data>
+    </node>
+    <node id="C1_W1">
+      <data key="d0">warehouse</data>
+      <data key="d1">Salvador</data>
+      <data key="d2">8300</data>
+      <data key="d3">Warehouse C1_W1</data>
+    </node>
+    <node id="C1_W2">
+      <data key="d0">warehouse</data>
+      <data key="d1">Feira de Santana</data>
+      <data key="d2">7600</data>
+      <data key="d3">Warehouse C1_W2</data>
+    </node>
+    <node id="C1_W3">
+      <data key="d0">warehouse</data>
+      <data key="d1">Aracaju</data>
+      <data key="d2">7000</data>
+      <data key="d3">Warehouse C1_W3</data>
+    </node>
+    <node id="C1_W4">
+      <data key="d0">warehouse</data>
+      <data key="d1">Vitoria da Conquista</data>
+      <data key="d2">6200</data>
+      <data key="d3">Warehouse C1_W4</data>
+    </node>
+    <node id="C2_W1">
+      <data key="d0">warehouse</data>
+      <data key="d1">Recife</data>
+      <data key="d2">9300</data>
+      <data key="d3">Warehouse C2_W1</data>
+    </node>
+    <node id="C2_W2">
+      <data key="d0">warehouse</data>
+      <data key="d1">Caruaru</data>
+      <data key="d2">7100</data>
+      <data key="d3">Warehouse C2_W2</data>
+    </node>
+    <node id="C2_W3">
+      <data key="d0">warehouse</data>
+      <data key="d1">Joao Pessoa</data>
+      <data key="d2">7000</data>
+      <data key="d3">Warehouse C2_W3</data>
+    </node>
+    <node id="C2_W4">
+      <data key="d0">warehouse</data>
+      <data key="d1">Campina Grande</data>
+      <data key="d2">6600</data>
+      <data key="d3">Warehouse C2_W4</data>
+    </node>
+    <node id="C2_W5">
+      <data key="d0">warehouse</data>
+      <data key="d1">Natal</data>
+      <data key="d2">7600</data>
+      <data key="d3">Warehouse C2_W5</data>
+    </node>
+    <node id="C2_W6">
+      <data key="d0">warehouse</data>
+      <data key="d1">Mossoro</data>
+      <data key="d2">6400</data>
+      <data key="d3">Warehouse C2_W6</data>
+    </node>
+    <node id="C3_W1">
+      <data key="d0">warehouse</data>
+      <data key="d1">Fortaleza</data>
+      <data key="d2">9900</data>
+      <data key="d3">Warehouse C3_W1</data>
+    </node>
+    <node id="C3_W2">
+      <data key="d0">warehouse</data>
+      <data key="d1">Sobral</data>
+      <data key="d2">6400</data>
+      <data key="d3">Warehouse C3_W2</data>
+    </node>
+    <node id="C3_W3">
+      <data key="d0">warehouse</data>
+      <data key="d1">Juazeiro do Norte</data>
+      <data key="d2">6500</data>
+      <data key="d3">Warehouse C3_W3</data>
+    </node>
+    <node id="C3_W4">
+      <data key="d0">warehouse</data>
+      <data key="d1">Teresina</data>
+      <data key="d2">8600</data>
+      <data key="d3">Warehouse C3_W4</data>
+    </node>
+    <node id="C3_W5">
+      <data key="d0">warehouse</data>
+      <data key="d1">Parnaiba</data>
+      <data key="d2">6000</data>
+      <data key="d3">Warehouse C3_W5</data>
+    </node>
+    <node id="C4_W1">
+      <data key="d0">warehouse</data>
+      <data key="d1">Sao Luis</data>
+      <data key="d2">9100</data>
+      <data key="d3">Warehouse C4_W1</data>
+    </node>
+    <node id="C4_W2">
+      <data key="d0">warehouse</data>
+      <data key="d1">Imperatriz</data>
+      <data key="d2">6200</data>
+      <data key="d3">Warehouse C4_W2</data>
+    </node>
+    <node id="C4_W3">
+      <data key="d0">warehouse</data>
+      <data key="d1">Bacabal</data>
+      <data key="d2">5800</data>
+      <data key="d3">Warehouse C4_W3</data>
+    </node>
+    <node id="C1_R1">
+      <data key="d0">retailer</data>
+      <data key="d1">Salvador</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C1_R1</data>
+    </node>
+    <node id="C1_R2">
+      <data key="d0">retailer</data>
+      <data key="d1">Lauro de Freitas</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C1_R2</data>
+    </node>
+    <node id="C1_R3">
+      <data key="d0">retailer</data>
+      <data key="d1">Camacari</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C1_R3</data>
+    </node>
+    <node id="C1_R4">
+      <data key="d0">retailer</data>
+      <data key="d1">Aracaju</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C1_R4</data>
+    </node>
+    <node id="C1_R5">
+      <data key="d0">retailer</data>
+      <data key="d1">Itabuna</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C1_R5</data>
+    </node>
+    <node id="C1_R6">
+      <data key="d0">retailer</data>
+      <data key="d1">Ilheus</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C1_R6</data>
+    </node>
+    <node id="C1_R7">
+      <data key="d0">retailer</data>
+      <data key="d1">Vitoria da Conquista</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C1_R7</data>
+    </node>
+    <node id="C1_R8">
+      <data key="d0">retailer</data>
+      <data key="d1">Feira de Santana</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C1_R8</data>
+    </node>
+    <node id="C2_R1">
+      <data key="d0">retailer</data>
+      <data key="d1">Recife</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C2_R1</data>
+    </node>
+    <node id="C2_R2">
+      <data key="d0">retailer</data>
+      <data key="d1">Olinda</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C2_R2</data>
+    </node>
+    <node id="C2_R3">
+      <data key="d0">retailer</data>
+      <data key="d1">Jaboatao dos Guararapes</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C2_R3</data>
+    </node>
+    <node id="C2_R4">
+      <data key="d0">retailer</data>
+      <data key="d1">Caruaru</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C2_R4</data>
+    </node>
+    <node id="C2_R5">
+      <data key="d0">retailer</data>
+      <data key="d1">Joao Pessoa</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C2_R5</data>
+    </node>
+    <node id="C2_R6">
+      <data key="d0">retailer</data>
+      <data key="d1">Cabedelo</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C2_R6</data>
+    </node>
+    <node id="C2_R7">
+      <data key="d0">retailer</data>
+      <data key="d1">Campina Grande</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C2_R7</data>
+    </node>
+    <node id="C2_R8">
+      <data key="d0">retailer</data>
+      <data key="d1">Natal</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C2_R8</data>
+    </node>
+    <node id="C2_R9">
+      <data key="d0">retailer</data>
+      <data key="d1">Parnamirim</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C2_R9</data>
+    </node>
+    <node id="C2_R10">
+      <data key="d0">retailer</data>
+      <data key="d1">Mossoro</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C2_R10</data>
+    </node>
+    <node id="C2_R11">
+      <data key="d0">retailer</data>
+      <data key="d1">Patos</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C2_R11</data>
+    </node>
+    <node id="C2_R12">
+      <data key="d0">retailer</data>
+      <data key="d1">Arcoverde</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C2_R12</data>
+    </node>
+    <node id="C3_R1">
+      <data key="d0">retailer</data>
+      <data key="d1">Fortaleza</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C3_R1</data>
+    </node>
+    <node id="C3_R2">
+      <data key="d0">retailer</data>
+      <data key="d1">Maracanau</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C3_R2</data>
+    </node>
+    <node id="C3_R3">
+      <data key="d0">retailer</data>
+      <data key="d1">Sobral</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C3_R3</data>
+    </node>
+    <node id="C3_R4">
+      <data key="d0">retailer</data>
+      <data key="d1">Juazeiro do Norte</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C3_R4</data>
+    </node>
+    <node id="C3_R5">
+      <data key="d0">retailer</data>
+      <data key="d1">Crato</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C3_R5</data>
+    </node>
+    <node id="C3_R6">
+      <data key="d0">retailer</data>
+      <data key="d1">Teresina</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C3_R6</data>
+    </node>
+    <node id="C3_R7">
+      <data key="d0">retailer</data>
+      <data key="d1">Parnaiba</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C3_R7</data>
+    </node>
+    <node id="C3_R8">
+      <data key="d0">retailer</data>
+      <data key="d1">Picos</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C3_R8</data>
+    </node>
+    <node id="C4_R1">
+      <data key="d0">retailer</data>
+      <data key="d1">Sao Luis</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C4_R1</data>
+    </node>
+    <node id="C4_R2">
+      <data key="d0">retailer</data>
+      <data key="d1">Sao Jose de Ribamar</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C4_R2</data>
+    </node>
+    <node id="C4_R3">
+      <data key="d0">retailer</data>
+      <data key="d1">Imperatriz</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C4_R3</data>
+    </node>
+    <node id="C4_R4">
+      <data key="d0">retailer</data>
+      <data key="d1">Caxias</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C4_R4</data>
+    </node>
+    <node id="C4_R5">
+      <data key="d0">retailer</data>
+      <data key="d1">Bacabal</data>
+      <data key="d4">market</data>
+      <data key="d3">Retailer C4_R5</data>
+    </node>
+    <node id="C4_R6">
+      <data key="d0">retailer</data>
+      <data key="d1">Timon</data>
+      <data key="d4">pharmacy</data>
+      <data key="d3">Retailer C4_R6</data>
+    </node>
+    <node id="C4_R7">
+      <data key="d0">retailer</data>
+      <data key="d1">Codó</data>
+      <data key="d4">wholesale</data>
+      <data key="d3">Retailer C4_R7</data>
+    </node>
+    <node id="C4_R8">
+      <data key="d0">retailer</data>
+      <data key="d1">Chapadinha</data>
+      <data key="d4">convenience</data>
+      <data key="d3">Retailer C4_R8</data>
+    </node>
+    <edge source="C1_S1" target="C1_W1" id="1">
+      <data key="d5">route</data>
+      <data key="d6">76</data>
+      <data key="d7">166</data>
+      <data key="d8">1445</data>
+      <data key="d9">Route 1</data>
+    </edge>
+    <edge source="C1_S1" target="C1_W1" id="2">
+      <data key="d5">route</data>
+      <data key="d6">96</data>
+      <data key="d7">193</data>
+      <data key="d8">1610</data>
+      <data key="d9">Route 2</data>
+    </edge>
+    <edge source="C1_S1" target="C1_W2" id="3">
+      <data key="d5">route</data>
+      <data key="d6">100</data>
+      <data key="d7">233</data>
+      <data key="d8">1335</data>
+      <data key="d9">Route 3</data>
+    </edge>
+    <edge source="C1_S2" target="C1_W2" id="4">
+      <data key="d5">route</data>
+      <data key="d6">92</data>
+      <data key="d7">194</data>
+      <data key="d8">1530</data>
+      <data key="d9">Route 4</data>
+    </edge>
+    <edge source="C1_S2" target="C1_W2" id="5">
+      <data key="d5">route</data>
+      <data key="d6">112</data>
+      <data key="d7">221</data>
+      <data key="d8">1695</data>
+      <data key="d9">Route 5</data>
+    </edge>
+    <edge source="C1_S2" target="C1_W4" id="6">
+      <data key="d5">route</data>
+      <data key="d6">97</data>
+      <data key="d7">296</data>
+      <data key="d8">1370</data>
+      <data key="d9">Route 6</data>
+    </edge>
+    <edge source="C1_S3" target="C1_W3" id="7">
+      <data key="d5">route</data>
+      <data key="d6">78</data>
+      <data key="d7">192</data>
+      <data key="d8">1615</data>
+      <data key="d9">Route 7</data>
+    </edge>
+    <edge source="C1_S3" target="C1_W3" id="8">
+      <data key="d5">route</data>
+      <data key="d6">98</data>
+      <data key="d7">219</data>
+      <data key="d8">1420</data>
+      <data key="d9">Route 8</data>
+    </edge>
+    <edge source="C1_S3" target="C1_W2" id="9">
+      <data key="d5">route</data>
+      <data key="d6">102</data>
+      <data key="d7">284</data>
+      <data key="d8">1165</data>
+      <data key="d9">Route 9</data>
+    </edge>
+    <edge source="C1_W1" target="C1_W2" id="10">
+      <data key="d5">route</data>
+      <data key="d6">77</data>
+      <data key="d7">95</data>
+      <data key="d8">1840</data>
+      <data key="d9">Route 10</data>
+    </edge>
+    <edge source="C1_W1" target="C1_W2" id="11">
+      <data key="d5">route</data>
+      <data key="d6">97</data>
+      <data key="d7">122</data>
+      <data key="d8">2005</data>
+      <data key="d9">Route 11</data>
+    </edge>
+    <edge source="C1_W2" target="C1_W3" id="12">
+      <data key="d5">route</data>
+      <data key="d6">66</data>
+      <data key="d7">122</data>
+      <data key="d8">1860</data>
+      <data key="d9">Route 12</data>
+    </edge>
+    <edge source="C1_W3" target="C1_W4" id="13">
+      <data key="d5">route</data>
+      <data key="d6">73</data>
+      <data key="d7">136</data>
+      <data key="d8">1845</data>
+      <data key="d9">Route 13</data>
+    </edge>
+    <edge source="C1_W3" target="C1_W4" id="14">
+      <data key="d5">route</data>
+      <data key="d6">93</data>
+      <data key="d7">163</data>
+      <data key="d8">2010</data>
+      <data key="d9">Route 14</data>
+    </edge>
+    <edge source="C1_W2" target="C1_W4" id="15">
+      <data key="d5">route</data>
+      <data key="d6">85</data>
+      <data key="d7">170</data>
+      <data key="d8">1895</data>
+      <data key="d9">Route 15</data>
+    </edge>
+    <edge source="C1_W1" target="C1_R1" id="16">
+      <data key="d5">route</data>
+      <data key="d6">63</data>
+      <data key="d7">78</data>
+      <data key="d8">840</data>
+      <data key="d9">Route 16</data>
+    </edge>
+    <edge source="C1_W1" target="C1_R1" id="17">
+      <data key="d5">route</data>
+      <data key="d6">83</data>
+      <data key="d7">105</data>
+      <data key="d8">1005</data>
+      <data key="d9">Route 17</data>
+    </edge>
+    <edge source="C1_W1" target="C1_R2" id="18">
+      <data key="d5">route</data>
+      <data key="d6">53</data>
+      <data key="d7">104</data>
+      <data key="d8">880</data>
+      <data key="d9">Route 18</data>
+    </edge>
+    <edge source="C1_W2" target="C1_R3" id="19">
+      <data key="d5">route</data>
+      <data key="d6">58</data>
+      <data key="d7">112</data>
+      <data key="d8">945</data>
+      <data key="d9">Route 19</data>
+    </edge>
+    <edge source="C1_W2" target="C1_R3" id="20">
+      <data key="d5">route</data>
+      <data key="d6">78</data>
+      <data key="d7">79</data>
+      <data key="d8">1110</data>
+      <data key="d9">Route 20</data>
+    </edge>
+    <edge source="C1_W3" target="C1_R4" id="21">
+      <data key="d5">route</data>
+      <data key="d6">62</data>
+      <data key="d7">50</data>
+      <data key="d8">1055</data>
+      <data key="d9">Route 21</data>
+    </edge>
+    <edge source="C1_W3" target="C1_R4" id="22">
+      <data key="d5">route</data>
+      <data key="d6">82</data>
+      <data key="d7">77</data>
+      <data key="d8">1220</data>
+      <data key="d9">Route 22</data>
+    </edge>
+    <edge source="C1_W3" target="C1_R6" id="23">
+      <data key="d5">route</data>
+      <data key="d6">78</data>
+      <data key="d7">90</data>
+      <data key="d8">1075</data>
+      <data key="d9">Route 23</data>
+    </edge>
+    <edge source="C1_W4" target="C1_R5" id="24">
+      <data key="d5">route</data>
+      <data key="d6">57</data>
+      <data key="d7">92</data>
+      <data key="d8">770</data>
+      <data key="d9">Route 24</data>
+    </edge>
+    <edge source="C1_W4" target="C1_R7" id="25">
+      <data key="d5">route</data>
+      <data key="d6">59</data>
+      <data key="d7">79</data>
+      <data key="d8">845</data>
+      <data key="d9">Route 25</data>
+    </edge>
+    <edge source="C1_W4" target="C1_R7" id="26">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">106</data>
+      <data key="d8">1010</data>
+      <data key="d9">Route 26</data>
+    </edge>
+    <edge source="C1_W2" target="C1_R8" id="27">
+      <data key="d5">route</data>
+      <data key="d6">64</data>
+      <data key="d7">87</data>
+      <data key="d8">955</data>
+      <data key="d9">Route 27</data>
+    </edge>
+    <edge source="C1_W2" target="C1_R8" id="28">
+      <data key="d5">route</data>
+      <data key="d6">84</data>
+      <data key="d7">114</data>
+      <data key="d8">1120</data>
+      <data key="d9">Route 28</data>
+    </edge>
+    <edge source="C1_W2" target="C1_R1" id="29">
+      <data key="d5">route</data>
+      <data key="d6">80</data>
+      <data key="d7">135</data>
+      <data key="d8">955</data>
+      <data key="d9">Route 29</data>
+    </edge>
+    <edge source="C1_W4" target="C1_R3" id="30">
+      <data key="d5">route</data>
+      <data key="d6">63</data>
+      <data key="d7">90</data>
+      <data key="d8">970</data>
+      <data key="d9">Route 30</data>
+    </edge>
+    <edge source="C2_S1" target="C2_W1" id="31">
+      <data key="d5">route</data>
+      <data key="d6">74</data>
+      <data key="d7">156</data>
+      <data key="d8">1815</data>
+      <data key="d9">Route 31</data>
+    </edge>
+    <edge source="C2_S1" target="C2_W1" id="32">
+      <data key="d5">route</data>
+      <data key="d6">94</data>
+      <data key="d7">183</data>
+      <data key="d8">1620</data>
+      <data key="d9">Route 32</data>
+    </edge>
+    <edge source="C2_S1" target="C2_W2" id="33">
+      <data key="d5">route</data>
+      <data key="d6">96</data>
+      <data key="d7">223</data>
+      <data key="d8">1345</data>
+      <data key="d9">Route 33</data>
+    </edge>
+    <edge source="C2_S2" target="C2_W2" id="34">
+      <data key="d5">route</data>
+      <data key="d6">91</data>
+      <data key="d7">186</data>
+      <data key="d8">1470</data>
+      <data key="d9">Route 34</data>
+    </edge>
+    <edge source="C2_S2" target="C2_W2" id="35">
+      <data key="d5">route</data>
+      <data key="d6">111</data>
+      <data key="d7">213</data>
+      <data key="d8">1635</data>
+      <data key="d9">Route 35</data>
+    </edge>
+    <edge source="C2_S2" target="C2_W4" id="36">
+      <data key="d5">route</data>
+      <data key="d6">92</data>
+      <data key="d7">256</data>
+      <data key="d8">1360</data>
+      <data key="d9">Route 36</data>
+    </edge>
+    <edge source="C2_S3" target="C2_W5" id="37">
+      <data key="d5">route</data>
+      <data key="d6">77</data>
+      <data key="d7">190</data>
+      <data key="d8">1675</data>
+      <data key="d9">Route 37</data>
+    </edge>
+    <edge source="C2_S3" target="C2_W5" id="38">
+      <data key="d5">route</data>
+      <data key="d6">97</data>
+      <data key="d7">217</data>
+      <data key="d8">1840</data>
+      <data key="d9">Route 38</data>
+    </edge>
+    <edge source="C2_S3" target="C2_W6" id="39">
+      <data key="d5">route</data>
+      <data key="d6">101</data>
+      <data key="d7">294</data>
+      <data key="d8">1535</data>
+      <data key="d9">Route 39</data>
+    </edge>
+    <edge source="C2_S4" target="C2_W3" id="40">
+      <data key="d5">route</data>
+      <data key="d6">87</data>
+      <data key="d7">146</data>
+      <data key="d8">1360</data>
+      <data key="d9">Route 40</data>
+    </edge>
+    <edge source="C2_S4" target="C2_W3" id="41">
+      <data key="d5">route</data>
+      <data key="d6">107</data>
+      <data key="d7">173</data>
+      <data key="d8">1525</data>
+      <data key="d9">Route 41</data>
+    </edge>
+    <edge source="C2_S4" target="C2_W4" id="42">
+      <data key="d5">route</data>
+      <data key="d6">87</data>
+      <data key="d7">210</data>
+      <data key="d8">1290</data>
+      <data key="d9">Route 42</data>
+    </edge>
+    <edge source="C2_W1" target="C2_W2" id="43">
+      <data key="d5">route</data>
+      <data key="d6">62</data>
+      <data key="d7">106</data>
+      <data key="d8">2035</data>
+      <data key="d9">Route 43</data>
+    </edge>
+    <edge source="C2_W1" target="C2_W2" id="44">
+      <data key="d5">route</data>
+      <data key="d6">82</data>
+      <data key="d7">133</data>
+      <data key="d8">2200</data>
+      <data key="d9">Route 44</data>
+    </edge>
+    <edge source="C2_W2" target="C2_W3" id="45">
+      <data key="d5">route</data>
+      <data key="d6">74</data>
+      <data key="d7">126</data>
+      <data key="d8">1985</data>
+      <data key="d9">Route 45</data>
+    </edge>
+    <edge source="C2_W3" target="C2_W4" id="46">
+      <data key="d5">route</data>
+      <data key="d6">73</data>
+      <data key="d7">120</data>
+      <data key="d8">1970</data>
+      <data key="d9">Route 46</data>
+    </edge>
+    <edge source="C2_W3" target="C2_W4" id="47">
+      <data key="d5">route</data>
+      <data key="d6">93</data>
+      <data key="d7">147</data>
+      <data key="d8">2135</data>
+      <data key="d9">Route 47</data>
+    </edge>
+    <edge source="C2_W4" target="C2_W5" id="48">
+      <data key="d5">route</data>
+      <data key="d6">66</data>
+      <data key="d7">160</data>
+      <data key="d8">1650</data>
+      <data key="d9">Route 48</data>
+    </edge>
+    <edge source="C2_W5" target="C2_W6" id="49">
+      <data key="d5">route</data>
+      <data key="d6">64</data>
+      <data key="d7">147</data>
+      <data key="d8">1765</data>
+      <data key="d9">Route 49</data>
+    </edge>
+    <edge source="C2_W5" target="C2_W6" id="50">
+      <data key="d5">route</data>
+      <data key="d6">84</data>
+      <data key="d7">114</data>
+      <data key="d8">1930</data>
+      <data key="d9">Route 50</data>
+    </edge>
+    <edge source="C2_W2" target="C2_W5" id="51">
+      <data key="d5">route</data>
+      <data key="d6">84</data>
+      <data key="d7">151</data>
+      <data key="d8">1635</data>
+      <data key="d9">Route 51</data>
+    </edge>
+    <edge source="C2_W1" target="C2_R1" id="52">
+      <data key="d5">route</data>
+      <data key="d6">64</data>
+      <data key="d7">50</data>
+      <data key="d8">1160</data>
+      <data key="d9">Route 52</data>
+    </edge>
+    <edge source="C2_W1" target="C2_R1" id="53">
+      <data key="d5">route</data>
+      <data key="d6">84</data>
+      <data key="d7">77</data>
+      <data key="d8">1325</data>
+      <data key="d9">Route 53</data>
+    </edge>
+    <edge source="C2_W1" target="C2_R2" id="54">
+      <data key="d5">route</data>
+      <data key="d6">52</data>
+      <data key="d7">71</data>
+      <data key="d8">1180</data>
+      <data key="d9">Route 54</data>
+    </edge>
+    <edge source="C2_W1" target="C2_R3" id="55">
+      <data key="d5">route</data>
+      <data key="d6">59</data>
+      <data key="d7">85</data>
+      <data key="d8">1205</data>
+      <data key="d9">Route 55</data>
+    </edge>
+    <edge source="C2_W2" target="C2_R4" id="56">
+      <data key="d5">route</data>
+      <data key="d6">59</data>
+      <data key="d7">77</data>
+      <data key="d8">860</data>
+      <data key="d9">Route 56</data>
+    </edge>
+    <edge source="C2_W2" target="C2_R4" id="57">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">104</data>
+      <data key="d8">1025</data>
+      <data key="d9">Route 57</data>
+    </edge>
+    <edge source="C2_W3" target="C2_R5" id="58">
+      <data key="d5">route</data>
+      <data key="d6">65</data>
+      <data key="d7">85</data>
+      <data key="d8">930</data>
+      <data key="d9">Route 58</data>
+    </edge>
+    <edge source="C2_W3" target="C2_R5" id="59">
+      <data key="d5">route</data>
+      <data key="d6">85</data>
+      <data key="d7">112</data>
+      <data key="d8">1095</data>
+      <data key="d9">Route 59</data>
+    </edge>
+    <edge source="C2_W3" target="C2_R6" id="60">
+      <data key="d5">route</data>
+      <data key="d6">54</data>
+      <data key="d7">52</data>
+      <data key="d8">970</data>
+      <data key="d9">Route 60</data>
+    </edge>
+    <edge source="C2_W4" target="C2_R7" id="61">
+      <data key="d5">route</data>
+      <data key="d6">56</data>
+      <data key="d7">49</data>
+      <data key="d8">1045</data>
+      <data key="d9">Route 61</data>
+    </edge>
+    <edge source="C2_W4" target="C2_R7" id="62">
+      <data key="d5">route</data>
+      <data key="d6">76</data>
+      <data key="d7">76</data>
+      <data key="d8">1210</data>
+      <data key="d9">Route 62</data>
+    </edge>
+    <edge source="C2_W5" target="C2_R8" id="63">
+      <data key="d5">route</data>
+      <data key="d6">62</data>
+      <data key="d7">57</data>
+      <data key="d8">1195</data>
+      <data key="d9">Route 63</data>
+    </edge>
+    <edge source="C2_W5" target="C2_R8" id="64">
+      <data key="d5">route</data>
+      <data key="d6">82</data>
+      <data key="d7">84</data>
+      <data key="d8">1000</data>
+      <data key="d9">Route 64</data>
+    </edge>
+    <edge source="C2_W5" target="C2_R9" id="65">
+      <data key="d5">route</data>
+      <data key="d6">76</data>
+      <data key="d7">87</data>
+      <data key="d8">845</data>
+      <data key="d9">Route 65</data>
+    </edge>
+    <edge source="C2_W6" target="C2_R10" id="66">
+      <data key="d5">route</data>
+      <data key="d6">53</data>
+      <data key="d7">81</data>
+      <data key="d8">900</data>
+      <data key="d9">Route 66</data>
+    </edge>
+    <edge source="C2_W6" target="C2_R10" id="67">
+      <data key="d5">route</data>
+      <data key="d6">73</data>
+      <data key="d7">108</data>
+      <data key="d8">1065</data>
+      <data key="d9">Route 67</data>
+    </edge>
+    <edge source="C2_W4" target="C2_R11" id="68">
+      <data key="d5">route</data>
+      <data key="d6">69</data>
+      <data key="d7">150</data>
+      <data key="d8">920</data>
+      <data key="d9">Route 68</data>
+    </edge>
+    <edge source="C2_W2" target="C2_R12" id="69">
+      <data key="d5">route</data>
+      <data key="d6">71</data>
+      <data key="d7">148</data>
+      <data key="d8">975</data>
+      <data key="d9">Route 69</data>
+    </edge>
+    <edge source="C2_W5" target="C2_R5" id="70">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">88</data>
+      <data key="d8">1030</data>
+      <data key="d9">Route 70</data>
+    </edge>
+    <edge source="C2_W6" target="C2_R8" id="71">
+      <data key="d5">route</data>
+      <data key="d6">82</data>
+      <data key="d7">98</data>
+      <data key="d8">1045</data>
+      <data key="d9">Route 71</data>
+    </edge>
+    <edge source="C3_S1" target="C3_W1" id="72">
+      <data key="d5">route</data>
+      <data key="d6">69</data>
+      <data key="d7">154</data>
+      <data key="d8">1600</data>
+      <data key="d9">Route 72</data>
+    </edge>
+    <edge source="C3_S1" target="C3_W1" id="73">
+      <data key="d5">route</data>
+      <data key="d6">89</data>
+      <data key="d7">181</data>
+      <data key="d8">1765</data>
+      <data key="d9">Route 73</data>
+    </edge>
+    <edge source="C3_S1" target="C3_W3" id="74">
+      <data key="d5">route</data>
+      <data key="d6">94</data>
+      <data key="d7">254</data>
+      <data key="d8">1440</data>
+      <data key="d9">Route 74</data>
+    </edge>
+    <edge source="C3_S2" target="C3_W2" id="75">
+      <data key="d5">route</data>
+      <data key="d6">86</data>
+      <data key="d7">184</data>
+      <data key="d8">1415</data>
+      <data key="d9">Route 75</data>
+    </edge>
+    <edge source="C3_S2" target="C3_W2" id="76">
+      <data key="d5">route</data>
+      <data key="d6">106</data>
+      <data key="d7">211</data>
+      <data key="d8">1580</data>
+      <data key="d9">Route 76</data>
+    </edge>
+    <edge source="C3_S2" target="C3_W1" id="77">
+      <data key="d5">route</data>
+      <data key="d6">111</data>
+      <data key="d7">252</data>
+      <data key="d8">1375</data>
+      <data key="d9">Route 77</data>
+    </edge>
+    <edge source="C3_S3" target="C3_W4" id="78">
+      <data key="d5">route</data>
+      <data key="d6">72</data>
+      <data key="d7">194</data>
+      <data key="d8">1770</data>
+      <data key="d9">Route 78</data>
+    </edge>
+    <edge source="C3_S3" target="C3_W4" id="79">
+      <data key="d5">route</data>
+      <data key="d6">92</data>
+      <data key="d7">221</data>
+      <data key="d8">1935</data>
+      <data key="d9">Route 79</data>
+    </edge>
+    <edge source="C3_S3" target="C3_W5" id="80">
+      <data key="d5">route</data>
+      <data key="d6">98</data>
+      <data key="d7">238</data>
+      <data key="d8">1260</data>
+      <data key="d9">Route 80</data>
+    </edge>
+    <edge source="C3_W1" target="C3_W2" id="81">
+      <data key="d5">route</data>
+      <data key="d6">68</data>
+      <data key="d7">88</data>
+      <data key="d8">2095</data>
+      <data key="d9">Route 81</data>
+    </edge>
+    <edge source="C3_W1" target="C3_W2" id="82">
+      <data key="d5">route</data>
+      <data key="d6">88</data>
+      <data key="d7">115</data>
+      <data key="d8">2260</data>
+      <data key="d9">Route 82</data>
+    </edge>
+    <edge source="C3_W2" target="C3_W3" id="83">
+      <data key="d5">route</data>
+      <data key="d6">80</data>
+      <data key="d7">108</data>
+      <data key="d8">1855</data>
+      <data key="d9">Route 83</data>
+    </edge>
+    <edge source="C3_W3" target="C3_W4" id="84">
+      <data key="d5">route</data>
+      <data key="d6">68</data>
+      <data key="d7">154</data>
+      <data key="d8">1860</data>
+      <data key="d9">Route 84</data>
+    </edge>
+    <edge source="C3_W3" target="C3_W4" id="85">
+      <data key="d5">route</data>
+      <data key="d6">88</data>
+      <data key="d7">181</data>
+      <data key="d8">2025</data>
+      <data key="d9">Route 85</data>
+    </edge>
+    <edge source="C3_W4" target="C3_W5" id="86">
+      <data key="d5">route</data>
+      <data key="d6">66</data>
+      <data key="d7">122</data>
+      <data key="d8">2070</data>
+      <data key="d9">Route 86</data>
+    </edge>
+    <edge source="C3_W1" target="C3_R1" id="87">
+      <data key="d5">route</data>
+      <data key="d6">59</data>
+      <data key="d7">76</data>
+      <data key="d8">1395</data>
+      <data key="d9">Route 87</data>
+    </edge>
+    <edge source="C3_W1" target="C3_R1" id="88">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">103</data>
+      <data key="d8">1200</data>
+      <data key="d9">Route 88</data>
+    </edge>
+    <edge source="C3_W1" target="C3_R2" id="89">
+      <data key="d5">route</data>
+      <data key="d6">71</data>
+      <data key="d7">99</data>
+      <data key="d8">1025</data>
+      <data key="d9">Route 89</data>
+    </edge>
+    <edge source="C3_W2" target="C3_R3" id="90">
+      <data key="d5">route</data>
+      <data key="d6">50</data>
+      <data key="d7">40</data>
+      <data key="d8">950</data>
+      <data key="d9">Route 90</data>
+    </edge>
+    <edge source="C3_W2" target="C3_R3" id="91">
+      <data key="d5">route</data>
+      <data key="d6">70</data>
+      <data key="d7">67</data>
+      <data key="d8">1115</data>
+      <data key="d9">Route 91</data>
+    </edge>
+    <edge source="C3_W3" target="C3_R4" id="92">
+      <data key="d5">route</data>
+      <data key="d6">60</data>
+      <data key="d7">56</data>
+      <data key="d8">1050</data>
+      <data key="d9">Route 92</data>
+    </edge>
+    <edge source="C3_W3" target="C3_R4" id="93">
+      <data key="d5">route</data>
+      <data key="d6">80</data>
+      <data key="d7">83</data>
+      <data key="d8">1215</data>
+      <data key="d9">Route 93</data>
+    </edge>
+    <edge source="C3_W3" target="C3_R5" id="94">
+      <data key="d5">route</data>
+      <data key="d6">71</data>
+      <data key="d7">77</data>
+      <data key="d8">1090</data>
+      <data key="d9">Route 94</data>
+    </edge>
+    <edge source="C3_W4" target="C3_R6" id="95">
+      <data key="d5">route</data>
+      <data key="d6">69</data>
+      <data key="d7">66</data>
+      <data key="d8">1315</data>
+      <data key="d9">Route 95</data>
+    </edge>
+    <edge source="C3_W4" target="C3_R6" id="96">
+      <data key="d5">route</data>
+      <data key="d6">65</data>
+      <data key="d7">93</data>
+      <data key="d8">1120</data>
+      <data key="d9">Route 96</data>
+    </edge>
+    <edge source="C3_W5" target="C3_R7" id="97">
+      <data key="d5">route</data>
+      <data key="d6">58</data>
+      <data key="d7">90</data>
+      <data key="d8">825</data>
+      <data key="d9">Route 97</data>
+    </edge>
+    <edge source="C3_W4" target="C3_R8" id="98">
+      <data key="d5">route</data>
+      <data key="d6">66</data>
+      <data key="d7">117</data>
+      <data key="d8">850</data>
+      <data key="d9">Route 98</data>
+    </edge>
+    <edge source="C3_W1" target="C3_R6" id="99">
+      <data key="d5">route</data>
+      <data key="d6">74</data>
+      <data key="d7">149</data>
+      <data key="d8">925</data>
+      <data key="d9">Route 99</data>
+    </edge>
+    <edge source="C3_W4" target="C3_R1" id="100">
+      <data key="d5">route</data>
+      <data key="d6">80</data>
+      <data key="d7">120</data>
+      <data key="d8">930</data>
+      <data key="d9">Route 100</data>
+    </edge>
+    <edge source="C4_S1" target="C4_W1" id="101">
+      <data key="d5">route</data>
+      <data key="d6">91</data>
+      <data key="d7">154</data>
+      <data key="d8">1775</data>
+      <data key="d9">Route 101</data>
+    </edge>
+    <edge source="C4_S1" target="C4_W1" id="102">
+      <data key="d5">route</data>
+      <data key="d6">87</data>
+      <data key="d7">181</data>
+      <data key="d8">1940</data>
+      <data key="d9">Route 102</data>
+    </edge>
+    <edge source="C4_S1" target="C4_W3" id="103">
+      <data key="d5">route</data>
+      <data key="d6">93</data>
+      <data key="d7">250</data>
+      <data key="d8">1585</data>
+      <data key="d9">Route 103</data>
+    </edge>
+    <edge source="C4_S2" target="C4_W2" id="104">
+      <data key="d5">route</data>
+      <data key="d6">83</data>
+      <data key="d7">180</data>
+      <data key="d8">1260</data>
+      <data key="d9">Route 104</data>
+    </edge>
+    <edge source="C4_S2" target="C4_W2" id="105">
+      <data key="d5">route</data>
+      <data key="d6">103</data>
+      <data key="d7">207</data>
+      <data key="d8">1425</data>
+      <data key="d9">Route 105</data>
+    </edge>
+    <edge source="C4_S2" target="C4_W3" id="106">
+      <data key="d5">route</data>
+      <data key="d6">104</data>
+      <data key="d7">242</data>
+      <data key="d8">1250</data>
+      <data key="d9">Route 106</data>
+    </edge>
+    <edge source="C4_W1" target="C4_W2" id="107">
+      <data key="d5">route</data>
+      <data key="d6">83</data>
+      <data key="d7">150</data>
+      <data key="d8">1975</data>
+      <data key="d9">Route 107</data>
+    </edge>
+    <edge source="C4_W1" target="C4_W2" id="108">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">177</data>
+      <data key="d8">2140</data>
+      <data key="d9">Route 108</data>
+    </edge>
+    <edge source="C4_W2" target="C4_W3" id="109">
+      <data key="d5">route</data>
+      <data key="d6">63</data>
+      <data key="d7">146</data>
+      <data key="d8">1925</data>
+      <data key="d9">Route 109</data>
+    </edge>
+    <edge source="C4_W1" target="C4_R1" id="110">
+      <data key="d5">route</data>
+      <data key="d6">56</data>
+      <data key="d7">39</data>
+      <data key="d8">1290</data>
+      <data key="d9">Route 110</data>
+    </edge>
+    <edge source="C4_W1" target="C4_R1" id="111">
+      <data key="d5">route</data>
+      <data key="d6">76</data>
+      <data key="d7">66</data>
+      <data key="d8">1455</data>
+      <data key="d9">Route 111</data>
+    </edge>
+    <edge source="C4_W1" target="C4_R2" id="112">
+      <data key="d5">route</data>
+      <data key="d6">68</data>
+      <data key="d7">62</data>
+      <data key="d8">910</data>
+      <data key="d9">Route 112</data>
+    </edge>
+    <edge source="C4_W2" target="C4_R3" id="113">
+      <data key="d5">route</data>
+      <data key="d6">73</data>
+      <data key="d7">64</data>
+      <data key="d8">875</data>
+      <data key="d9">Route 113</data>
+    </edge>
+    <edge source="C4_W2" target="C4_R3" id="114">
+      <data key="d5">route</data>
+      <data key="d6">69</data>
+      <data key="d7">91</data>
+      <data key="d8">1040</data>
+      <data key="d9">Route 114</data>
+    </edge>
+    <edge source="C4_W2" target="C4_R4" id="115">
+      <data key="d5">route</data>
+      <data key="d6">61</data>
+      <data key="d7">90</data>
+      <data key="d8">915</data>
+      <data key="d9">Route 115</data>
+    </edge>
+    <edge source="C4_W3" target="C4_R5" id="116">
+      <data key="d5">route</data>
+      <data key="d6">59</data>
+      <data key="d7">79</data>
+      <data key="d8">1000</data>
+      <data key="d9">Route 116</data>
+    </edge>
+    <edge source="C4_W3" target="C4_R5" id="117">
+      <data key="d5">route</data>
+      <data key="d6">79</data>
+      <data key="d7">106</data>
+      <data key="d8">1165</data>
+      <data key="d9">Route 117</data>
+    </edge>
+    <edge source="C4_W3" target="C4_R7" id="118">
+      <data key="d5">route</data>
+      <data key="d6">72</data>
+      <data key="d7">107</data>
+      <data key="d8">1040</data>
+      <data key="d9">Route 118</data>
+    </edge>
+    <edge source="C4_W2" target="C4_R6" id="119">
+      <data key="d5">route</data>
+      <data key="d6">80</data>
+      <data key="d7">138</data>
+      <data key="d8">1055</data>
+      <data key="d9">Route 119</data>
+    </edge>
+    <edge source="C4_W1" target="C4_R8" id="120">
+      <data key="d5">route</data>
+      <data key="d6">62</data>
+      <data key="d7">96</data>
+      <data key="d8">730</data>
+      <data key="d9">Route 120</data>
+    </edge>
+  </graph>
+</graphml>
