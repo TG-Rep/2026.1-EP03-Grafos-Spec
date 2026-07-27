@@ -6,21 +6,6 @@ Diferentemente dos exercícios anteriores, neste EP as implementações não ser
 
 ---
 
-# Objetivos do EP03
-
-Ao final desta atividade, espera-se que o aluno seja capaz de:
-
-* escrever consultas utilizando a linguagem Cypher;
-* utilizar agregações e agrupamentos sobre grafos;
-* executar algoritmos da biblioteca Graph Data Science;
-* interpretar métricas de centralidade;
-* identificar comunidades em redes logísticas;
-* modelar problemas clássicos de Teoria dos Grafos em Neo4j;
-* interpretar resultados obtidos por algoritmos de análise de grafos no contexto de cadeias de suprimento.
-
-
----
-
 # Orientações Gerais
 
 * Utilize estritamente a estrutura disponibilizada no repositório. Não altere nomes de arquivos nem sua localização, pois isso poderá inviabilizar a correção automática da atividade;
