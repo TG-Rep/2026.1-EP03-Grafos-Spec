@@ -181,7 +181,7 @@ As consultas deverão ser implementadas no arquivo:
 
 `cypher/Q01.cypher`
 
-#### (a)  Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
+#### (a)  Escreva uma consulta para determinar quantos nós existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
 > Saída Esperada:
 
@@ -191,7 +191,7 @@ type | quantity
 "WAREHOUSE" | 24
 "RETAILER" | 48
 
-#### (b)  Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
+#### (b)  Escreva uma consulta para identificar os centros de distribuição (`WAREHOUSE`) que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
 
 > Saída Esperada  (24 records):
@@ -204,7 +204,7 @@ warehouse | retailers
 ... | ...
 
 
-#### (c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
+#### (c) Escreva uma consulta que identifique os fornecedores (`SUPPLIER`) que abastecem diretamente o maior número de centros de distribuição (`WAREHOUSE`). A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (16 records):
 
@@ -216,7 +216,7 @@ supplier | warehouses
 ... | ...
 
 
-#### (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
+#### (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição (`WAREHOUSE`). A consulta deve retornar: cidade e quantidade de centros de distribuição existentes. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (24 records):
 
@@ -250,7 +250,7 @@ Implemente as consultas solicitadas no arquivo:
 cypher/Q02.cypher
 ```
 
-#### (a)  Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+#### (a)  Calcule  **Degree Centrality** de todos os centros de distribuição. A consulta deve retornar: nome do centro de distribuição e valor da centralidade. Apresente os resultados em ordem decrescente.
 
 > Saída Esperada (24 records): 
 
@@ -261,7 +261,7 @@ warehouse | score
 "Warehouse NE_W3" | 6.0
 ... | ...
 
-#### (b)  Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+#### (b)  Calcule  **Betweenness Centrality** de todos os centros de distribuição. A consulta deve retornar: nome do centro de distribuição e valor da centralidade. Apresente os resultados em ordem decrescente.
 
 > Saída Esperada (24 records):
 
@@ -272,7 +272,7 @@ warehouse | score
 "Warehouse N_W6" | 863.67
 ... | ...
 
-#### (c) Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
+#### (c) Calcule o **PageRank** de todos os centros de distribuição. A consulta deve retornar: nome do centro de distribuição e  valor do PageRank.
 Apresente os resultados em ordem decrescente.
 
 
@@ -291,7 +291,7 @@ warehouse | score
 
 2. Os três algoritmos produziram o mesmo ranking? Caso contrário, explique por quê.
 
-3. Explique, em suas próprias palavras, no contexto deste exercício, a diferença entre:
+3. Explique, em suas próprias palavras, no contexto deste exercício e considerando centros de distribuição, a diferença entre:
    - Degree Centrality;
    - Betweenness Centrality;
    - PageRank.
@@ -308,7 +308,7 @@ As consultas deverão ser implementadas no arquivo:
 cypher/Q03.cypher
 ```
 
-#### (a) Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
+#### (a) Escreva uma consulta para detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
 
 > Saída Esperada (88 records):
 
