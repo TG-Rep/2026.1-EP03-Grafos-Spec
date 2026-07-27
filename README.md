@@ -36,34 +36,6 @@ Diferentemente dos exercícios anteriores, neste EP os algoritmos clássicos nã
 
 * Alterações realizadas após o prazo serão tratadas conforme as regras da disciplina para atividades de reposição.
 
----
-
-# Organização do Repositório
-
-O repositório possui a seguinte organização.
-
-```
-.
-├── cypher/
-│   ├── Q01.cypher
-│   ├── Q02.cypher
-│   ├── Q03.cypher
-│   └── Q04.cypher
-│
-├── docs/
-│   ├── Q02.md
-|
-├── images/
-|
-└── README.md
-```
-
-* **cypher** - Contém as consultas Cypher que deverão ser desenvolvidas para cada questão.
-
-* **docs** - Contém documentação eventualmente solicitada durante a atividade.
-
-* **images** - Contém figuras utilizadas neste documento.
-
 # Domínio do Problema
 
 Neste exercício continuaremos utilizando o mesmo domínio dos EP01 e EP02.
