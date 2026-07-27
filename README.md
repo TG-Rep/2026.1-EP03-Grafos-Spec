@@ -2,7 +2,7 @@
 
 O objetivo desta atividade é explorar **consultas e algoritmos de análise de grafos utilizando Neo4j**, aplicando conceitos avançados de Teoria dos Grafos no contexto de **cadeias de suprimento e logística**.
 
-Diferentemente dos exercícios anteriores, neste EP os algoritmos clássicos não serão implementados diretamente em Python. Em vez disso, o objetivo é modelar consultas utilizando **Cypher** e utilizar algoritmos da biblioteca **Neo4j Graph Data Science (GDS)** para analisar a estrutura da rede logística.
+Diferentemente dos exercícios anteriores, neste EP as implementações não serão feitas diretamente em Python. Em vez disso, o objetivo é modelar consultas utilizando **Cypher** e utilizar algoritmos da biblioteca **Neo4j Graph Data Science (GDS)** para analisar a estrutura da rede logística.
 
 ---
 
