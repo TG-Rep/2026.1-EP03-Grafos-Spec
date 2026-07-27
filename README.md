@@ -193,8 +193,7 @@ Ao final desta atividade, espera-se que o aluno seja capaz de:
 Uma empresa deseja obter uma visão geral da estrutura de sua rede logística antes de realizar análises mais avançadas.
 Utilizando consultas em **Cypher**, construa um pequeno painel (*dashboard*) contendo informações estruturais sobre a rede. As consultas deverão ser implementadas no arquivo: `cypher/Q01.cypher`
 
-#### (a) 
-Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
+#### (a)  Escreva uma consulta para determinar quantos vértices existem de cada um dos seguintes tipos: `SUPPLIER`, `WAREHOUSE`, `RETAILER`.
 
 > Saída Esperada:
 
@@ -204,8 +203,7 @@ type | quantity
 "WAREHOUSE" | 24
 "RETAILER" | 48
 
-#### (b) 
-Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
+#### (b)  Escreva uma consulta para identificar os centros de distribuição que atendem diretamente o maior número de clientes (`RETAILER`). A consulta deve retornar: nome do warehouse e quantidade de clientes atendidos. Os resultados devem ser apresentados em ordem decrescente da quantidade de clientes.
 
 
 > Saída Esperada  (24 records):
@@ -218,8 +216,7 @@ warehouse | retailers
 ... | ...
 
 
-#### (c) 
-Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
+#### (c) Escreva uma consulta que identifique os fornecedores que abastecem diretamente o maior número de centros de distribuição. A consulta deve retornar: nome do fornecedor e quantidade de warehouses abastecidos. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (16 records):
 
@@ -231,9 +228,7 @@ supplier | warehouses
 ... | ...
 
 
-
-#### (d) 
-Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
+#### (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
 
 > Saída Esperada (24 records):
 
@@ -267,8 +262,7 @@ Implemente as consultas solicitadas no arquivo:
 cypher/Q02.cypher
 ```
 
-#### (a) 
-Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+#### (a)  Calcule  **Degree Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
 > Saída Esperada (24 records): 
 
@@ -279,8 +273,7 @@ warehouse | score
 "Warehouse NE_W3" | 6.0
 ... | ...
 
-#### (b) 
-Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
+#### (b)  Calcule  **Betweenness Centrality** de todos os warehouses. A consulta deve retornar: nome do warehouse e valor da centralidade. Apresente os resultados em ordem decrescente.
 
 > Saída Esperada (24 records):
 
@@ -291,8 +284,7 @@ warehouse | score
 "Warehouse N_W6" | 863.67
 ... | ...
 
-#### (c) 
-Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
+#### (c) Calcule o **PageRank** de todos os warehouses. A consulta deve retornar: nome do warehouse e  valor do PageRank.
 Apresente os resultados em ordem decrescente.
 
 
@@ -305,9 +297,7 @@ warehouse | score
 "Warehouse N_W4" | 0.47
 ... | ...
 
-#### (d) 
-
-Responda às seguintes questões em `docs/Q02.md`.
+#### (d) Responda às seguintes questões em `docs/Q02.md`.
 
 1. Qual(is) warehouse(s) apresentou(aram) maior importância segundo cada uma das três medidas?
 
