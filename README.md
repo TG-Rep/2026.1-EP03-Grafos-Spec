@@ -129,7 +129,7 @@ Saída esperada:
 
 ![](images/schema.png)
 
-Liste as labels existentes:
+Liste os tipos de nodes existentes:
 
 ```cypher
 CALL db.labels();
