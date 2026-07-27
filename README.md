@@ -330,91 +330,31 @@ As consultas deverão ser implementadas no arquivo:
 cypher/Q03.cypher
 ```
 
-(a) Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
+#### (a)
+Escreva uma consulta detecção de comunidades utilizando **Louvain**. A consulta deve retornar, para cada vértice: nome, tipo do vértice e identificador da comunidade. Apresente os resultados agrupados por comunidade.
 
-```cypher
-CALL gds.louvain.stream('logistics')
-YIELD nodeId, communityId
-RETURN
-    gds.util.asNode(nodeId).name AS node,
-    labels(gds.util.asNode(nodeId)) AS labels,
-    communityId
-ORDER BY communityId, node;
-```
+> Saída Esperada
 
-(b) Escreva uma consulta para determinar quantas comunidades foram identificadas pelo algoritmo.
+#### (b) 
+Escreva uma consulta para determinar quantas comunidades foram identificadas pelo algoritmo.
 
-```cypher
-CALL gds.louvain.stream('logistics')
-YIELD communityId
-RETURN count(DISTINCT communityId) AS communities;
-```
+> Saída Esperada
 
- (c) Para cada comunidade encontrada, apresente seus membros. A consulta deve retornar: identificador da comunidade, lista de vértices pertencentes à comunidade.
+#### (c) 
+Para cada comunidade encontrada, apresente seus membros. A consulta deve retornar: identificador da comunidade, lista de vértices pertencentes à comunidade.
 
- ```cypher
-CALL gds.louvain.stream('logistics')
-YIELD nodeId, communityId
-WITH communityId,
-     gds.util.asNode(nodeId) AS node
-RETURN
-    communityId,
-    collect(node.name) AS members
-ORDER BY communityId;
-```
+> Saída Esperada
 
 (d) Interpretação
 
-Elabore um breve relatório (`docs/Q03.md`) respondendo às seguintes questões.
+Responda às seguintes questões em `docs/Q03.md`:
 
 1. As comunidades encontradas representam regiões logísticas distintas? Justifique.
 
-   Resposta esperada
-
-O aluno deve analisar os resultados.
-
-Uma boa resposta pode observar, por exemplo, que:
-
-warehouses de uma mesma cidade tendem a ficar na mesma comunidade;
-fornecedores normalmente pertencem à comunidade que abastecem;
-retailers aparecem agrupados ao warehouse responsável.
-
-Não é necessário que isso ocorra exatamente dessa forma; a justificativa deve ser baseada no resultado obtido.
-
 2. Existem warehouses que atuam como ligação entre comunidades diferentes? Caso positivo, identifique alguns exemplos.
-
-Resposta esperada
-
-O aluno deve identificar warehouses que possuem relacionamentos com vértices pertencentes a comunidades distintas.
-
-Esses vértices podem representar:
-
-centros de redistribuição;
-hubs regionais;
-pontos de integração da rede.
 
 3. O resultado obtido faz sentido do ponto de vista da operação logística? Explique.
 
-   Espera-se que o aluno discuta aspectos como:
-
-proximidade geográfica;
-divisão natural da operação;
-independência entre regiões;
-concentração de clientes.
-
-A justificativa é mais importante do que a resposta.
-
 4. Como a empresa poderia utilizar essas comunidades para apoiar decisões estratégicas?
 
-Resposta esperada
-
-Exemplos:
-
-dividir a operação em regiões;
-atribuir equipes diferentes;
-planejar manutenção por comunidade;
-distribuir estoques regionalmente;
-identificar oportunidades de expansão.
-
-Outras respostas coerentes devem ser aceitas.
 
