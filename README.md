@@ -69,6 +69,10 @@ Não existem relacionamentos diretos de:
 * Supplier → Retailer
 * Retailer → qualquer outro vértice
 
+A figura abaixo apresenta um exemplo de um grafo que modela uma cadeia de suprimento.
+
+![](images/sample.png)
+
 ---
 
 # Importação do Grafo
