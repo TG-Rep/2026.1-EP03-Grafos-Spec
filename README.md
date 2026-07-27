@@ -154,6 +154,9 @@ Visualize o esquema da base de dados:
 CALL db.schema.visualization();
 ```
 
+Saída esperada:
+![](images/schema.png)
+
 Liste as labels existentes:
 
 ```cypher
