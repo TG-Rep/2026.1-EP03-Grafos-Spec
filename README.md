@@ -96,9 +96,9 @@ RETURN count(*) AS updatedNodes;
 ```
 Como funciona?
 * `WITH n, toUpper(n.type) AS label` - converte o atributo `type` (`supplier, warehouse, retailer`) para `SUPPLIER`, `WAREHOUSE` e `RETAILER`.
-* `SET n:$(label)` - adiciona dinamicamente a label cujo nome está armazenado na variável label.
-Essa é a sintaxe recomendada nas versões recentes do Neo4j.
-* `REMOVE n.type` - Remove a propriedade `type`, já que ela passa a ser representada pela label.
+* `SET n:$(label)` - adiciona dinamicamente o label cujo nome está armazenado na variável label.
+
+* `REMOVE n.type` - Remove a propriedade `type`, já que ela passa a ser representada pelo label.
   
 Em seguida, substitua o relacionamento `RELATED` pelo relacionamento `ROUTE`.
 
