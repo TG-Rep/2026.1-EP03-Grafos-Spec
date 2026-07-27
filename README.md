@@ -47,7 +47,7 @@ Uma **cadeia de suprimento** é composta por fornecedores, centros de distribui�
 
 # Modelo de Dados no Neo4j
 
-A rede logística é representada por um grafo direcionado contendo três tipos de vértices.
+A rede logística é representada por um grafo direcionado contendo três tipos de nós:
 
 * `SUPPLIER` - Representa um fornecedor de produtos. Principais propriedades:  `name`, `city`,  `capacity`
 * `WAREHOUSE` - Representa um centro de distribuição. Principais propriedades: `name`, `city`, `capacity`
@@ -60,13 +60,11 @@ O modelo admite apenas as seguintes conexões:
 
 ```
 SUPPLIER  ──ROUTE──► WAREHOUSE
-
 WAREHOUSE ──ROUTE──► WAREHOUSE
-
 WAREHOUSE ──ROUTE──► RETAILER
 ```
 
-Não existem relacionamentos diretos:
+Não existem relacionamentos diretos de:
 
 * Supplier → Retailer
 * Retailer → qualquer outro vértice
@@ -83,6 +81,8 @@ CALL apoc.import.graphml(
   {readLabels: true}
 );
 ```
+
+Neste repositório, existem outros modelos que podem ser utilizados para teste, mas este modelo acima é o que vai ser utilizado durante a correção.
 
 Após a importação, os vértices possuirão uma propriedade denominada `type`. Essa propriedade deve ser convertida em labels do Neo4j.
 
