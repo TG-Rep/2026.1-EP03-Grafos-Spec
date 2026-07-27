@@ -119,41 +119,41 @@ RETURN count(*) AS updatedRelationships;
 
 Antes de iniciar o exercício, recomenda-se verificar se a importação foi realizada corretamente.
 
-Visualize o esquema da base de dados:
+#### Visualize o esquema da base de dados:
 
 ```cypher
 CALL db.schema.visualization();
 ```
 
-Saída esperada:
+>  Saída Esperada:
 
 ![](images/schema.png)
 
-Liste os tipos de nodes existentes:
+#### Liste os tipos de nodes existentes:
 
 ```cypher
 CALL db.labels();
 ```
 
-Saída Esperada: 
+>  Saída Esperada: 
 ```
 "SUPPLIER"
 "WAREHOUSE"
 "RETAILER"
 ```
 
-Liste os tipos de relacionamento:
+#### Liste os tipos de relacionamento:
 
 ```cypher
 CALL db.relationshipTypes();
 ```
 
-Saída Esperada: 
+> Saída Esperada: 
 ```
 ROUTE
 ```
 
-Verifique quantos nós e relacionamentos contém:
+#### Verifique quantos nós e relacionamentos contém:
 
 ```cypher
 MATCH (n)
@@ -164,7 +164,7 @@ RETURN
     count(r) AS relationships;
 ```
 
-Saída esperada:
+> Saída esperada:
 
 nodes | relationships
 ------| -------------
