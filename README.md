@@ -110,7 +110,7 @@ Após criar um sandbox Neo4j vazio, importe o grafo utilizando o procedimento AP
 
 ```cypher
 CALL apoc.import.graphml(
-  "[https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/lognet.graphml](https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/norte_nordeste_bidirecional_realista.graphml)",
+  "https://raw.githubusercontent.com/TG-Rep/2026.1-EP03-Grafos-Spec/refs/heads/main/norte_nordeste_bidirecional_realista.graphml",
   {readLabels: true}
 );
 ```
