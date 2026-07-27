@@ -233,10 +233,14 @@ supplier | warehouses
 
 (d) Escreva uma consulta para determinar quais cidades concentram o maior número de centros de distribuição. A consulta deve retornar: cidade e quantidade de warehouses existentes. Os resultados devem ser apresentados em ordem decrescente.
 
+> Saída Esperada (24 records):
 
-
-SAÍDA ESPERADA:
-
+city | warehouses
+--------|-------------
+"Salvador" | 1
+"Feira de Santana" | 1
+"Recife" | 1
+... | ...
 
 
 
