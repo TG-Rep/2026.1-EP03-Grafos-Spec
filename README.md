@@ -84,7 +84,7 @@ CALL apoc.import.graphml(
 
 Neste repositório, existem outros modelos que podem ser utilizados para teste, mas este modelo acima é o que vai ser utilizado durante a correção.
 
-Após a importação, os vértices possuirão uma propriedade denominada `type`. Essa propriedade deve ser convertida em labels do Neo4j.
+Após a importação, os vértices possuirão uma propriedade denominada `type`. Essa propriedade deve ser convertida em labels do Neo4j. Lembrando que os tipos dos nós recebem a denominação de labels. 
 
 ```cypher
 MATCH (n)
